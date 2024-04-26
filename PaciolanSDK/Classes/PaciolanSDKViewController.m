@@ -24,6 +24,8 @@
 
 @implementation PaciolanSDKViewController
 
+static TokenCallback tokenCallback;
+
 RCT_EXPORT_MODULE()
 
 - (void)viewDidLoad {
@@ -53,5 +55,17 @@ RCT_EXPORT_METHOD(navAwayFromPac:(NSString *)response resolver:(RCTPromiseResolv
     // Send event to JavaScript with the callback block
     [[PaciolanSDKEventEmitter allocWithZone: NULL] sendEventToJS:@"navAwayEvent" callback:jsResponseHandler];
 }
+
+- (void) setTokenListener: (void(^)(NSString* token))callback
+{
+    tokenCallback = callback;
+}
+
+RCT_EXPORT_METHOD(storeToken:(NSString *)token)
+{
+    if (tokenCallback) {
+        tokenCallback(token);
+    }
+};
 
 @end

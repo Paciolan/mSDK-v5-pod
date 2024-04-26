@@ -10,11 +10,12 @@
 #import <React/RCTEventEmitter.h>
 #import <React/RCTBridge.h>
 
+typedef void (^TokenCallback)(NSString* token);
+
 @interface PaciolanSDKViewController : UIViewController <RCTBridgeModule>
 
 @property (strong, nonatomic) NSString* config;
-@property RCTBridge *bridge;
-
 - (void)navAwayFromPac:(NSString *)response resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject;
 
+- (void)setTokenListener: (TokenCallback) finishBlock;
 @end
