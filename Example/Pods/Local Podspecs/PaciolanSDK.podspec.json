@@ -161,6 +161,24 @@
     ],
     "CodePush": [
       "8.2.1"
+    ],
+    "RNSentry": [
+      "5.22.0"
+    ],
+    "RNCPushNotificationIOS": [
+      "1.11.0"
+    ],
+    "react-native-select-contact": [
+      "1.6.3"
+    ],
+    "RNFBApp": [
+      "18.9.0"
+    ],
+    "RNFBMessaging": [
+      "18.9.0"
+    ],
+    "Sentry": [
+      "8.24.0"
     ]
   }
 }

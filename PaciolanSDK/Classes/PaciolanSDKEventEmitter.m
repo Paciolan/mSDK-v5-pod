@@ -1,8 +1,26 @@
 #import "PaciolanSDKEventEmitter.h"
 
-@implementation PaciolanSDKEventEmitter
+@implementation PaciolanSDKEventEmitter {
+   bool hasListeners;
+}
 
 RCT_EXPORT_MODULE();
+
+- (void) startObserving {
+  hasListeners = YES;
+}
+
+- (void) stopObserving {
+  hasListeners = NO;
+}
+
+- (bool) hasListeners {
+  return hasListeners;
+}
+
++ (BOOL)requiresMainQueueSetup {
+    return YES; // Set to YES if your module requires main queue setup
+}
 
 + (id)allocWithZone:(NSZone *)zone {
   static PaciolanSDKEventEmitter *sharedInstance = nil;
@@ -14,13 +32,19 @@ RCT_EXPORT_MODULE();
 }
 
 - (NSArray<NSString *> *)supportedEvents {
-    return @[@"navAwayEvent"];
+    return @[@"navAwayEvent", @"AppLaunchedEvent"];
 }
 
 - (void)sendEventToJS:(NSString *)eventName callback:(void (^)(BOOL))callback {
     // Store the callback for later use
     self.storedCallback = callback;
-    [self sendEventWithName:eventName body:nil];
+    
+    if(hasListeners){
+      NSLog(@"eventName... %@", eventName);
+     [self sendEventWithName:eventName body:nil];
+    } else {
+        NSLog(@"No listeners...");
+    }
 }
 
 RCT_EXPORT_METHOD(receiveResponseFromJS:(BOOL)response) {

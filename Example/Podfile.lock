@@ -15,10 +15,71 @@ PODS:
     - React-Core (= 0.73.4)
     - React-jsi (= 0.73.4)
     - ReactCommon/turbomodule/core (= 0.73.4)
+  - Firebase/CoreOnly (10.20.0):
+    - FirebaseCore (= 10.20.0)
+  - Firebase/Messaging (10.20.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 10.20.0)
+  - FirebaseCore (10.20.0):
+    - FirebaseCoreInternal (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.12)
+    - GoogleUtilities/Logger (~> 7.12)
+  - FirebaseCoreExtension (10.20.0):
+    - FirebaseCore (~> 10.0)
+  - FirebaseCoreInternal (10.22.0):
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseInstallations (10.22.0):
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - PromisesObjC (~> 2.1)
+  - FirebaseMessaging (10.20.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleDataTransport (~> 9.3)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/Reachability (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
   - fmt (6.2.1)
   - glog (0.3.5)
+  - GoogleDataTransport (9.4.1):
+    - GoogleUtilities/Environment (~> 7.7)
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/AppDelegateSwizzler (7.13.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Environment (7.13.0):
+    - GoogleUtilities/Privacy
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.13.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Network (7.13.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Privacy
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.13.0)":
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Privacy (7.13.0)
+  - GoogleUtilities/Reachability (7.13.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/UserDefaults (7.13.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
   - JWT (3.0.0-beta.14):
     - Base64 (~> 1.1.2)
+  - nanopb (2.30909.1):
+    - nanopb/decode (= 2.30909.1)
+    - nanopb/encode (= 2.30909.1)
+  - nanopb/decode (2.30909.1)
+  - nanopb/encode (2.30909.1)
   - PaciolanSDK (5.0.0):
     - boost (= 1.83.0)
     - CodePush (= 8.2.1)
@@ -42,6 +103,7 @@ PODS:
     - React-logger (= 0.73.4)
     - react-native-encrypted-storage (= 4.0.3)
     - react-native-safe-area-context (= 4.8.2)
+    - react-native-select-contact (= 1.6.3)
     - react-native-webview (= 13.8.1)
     - React-NativeModulesApple (= 0.73.4)
     - React-perflogger (= 0.73.4)
@@ -62,9 +124,15 @@ PODS:
     - ReactCommon (= 0.73.4)
     - RNCAsyncStorage (= 1.21.0)
     - RNCMaskedView (= 0.3.1)
+    - RNCPushNotificationIOS (= 1.11.0)
+    - RNFBApp (= 18.9.0)
+    - RNFBMessaging (= 18.9.0)
     - RNGestureHandler (= 2.15.0)
     - RNScreens (= 3.29.0)
+    - RNSentry (= 5.22.0)
+    - Sentry (= 8.24.0)
     - Yoga (= 1.14.0)
+  - PromisesObjC (2.4.0)
   - RCT-Folly (2022.05.16.00):
     - boost
     - DoubleConversion
@@ -910,6 +978,8 @@ PODS:
     - React-Core
   - react-native-safe-area-context (4.8.2):
     - React-Core
+  - react-native-select-contact (1.6.3):
+    - React-Core
   - react-native-webview (13.8.1):
     - glog
     - RCT-Folly (= 2022.05.16.00)
@@ -1081,6 +1151,16 @@ PODS:
     - React-Core
   - RNCMaskedView (0.3.1):
     - React-Core
+  - RNCPushNotificationIOS (1.11.0):
+    - React-Core
+  - RNFBApp (18.9.0):
+    - Firebase/CoreOnly (= 10.20.0)
+    - React-Core
+  - RNFBMessaging (18.9.0):
+    - Firebase/Messaging (= 10.20.0)
+    - FirebaseCoreExtension (= 10.20.0)
+    - React-Core
+    - RNFBApp
   - RNGestureHandler (2.15.0):
     - glog
     - RCT-Folly (= 2022.05.16.00)
@@ -1089,7 +1169,13 @@ PODS:
     - glog
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
-    - React-RCTImage
+  - RNSentry (5.22.0):
+    - React-Core
+    - Sentry/HybridSDK (= 8.24.0)
+  - Sentry (8.24.0):
+    - Sentry/Core (= 8.24.0)
+  - Sentry/Core (8.24.0)
+  - Sentry/HybridSDK (8.24.0)
   - SocketRocket (0.6.1)
   - SSZipArchive (2.2.3)
   - Yoga (1.14.0)
@@ -1127,6 +1213,7 @@ DEPENDENCIES:
   - React-Mapbuffer (from `../../node_modules/react-native/ReactCommon`)
   - react-native-encrypted-storage (from `../../node_modules/react-native-encrypted-storage/react-native-encrypted-storage.podspec`)
   - react-native-safe-area-context (from `../../node_modules/react-native-safe-area-context/react-native-safe-area-context.podspec`)
+  - react-native-select-contact (from `../../node_modules/react-native-select-contact/react-native-select-contact.podspec`)
   - react-native-webview (from `../../node_modules/react-native-webview/react-native-webview.podspec`)
   - React-nativeconfig (from `../../node_modules/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
@@ -1150,15 +1237,30 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../../node_modules/react-native/ReactCommon`)
   - "RNCAsyncStorage (from `../../node_modules/@react-native-async-storage/async-storage/RNCAsyncStorage.podspec`)"
   - "RNCMaskedView (from `../../node_modules/@react-native-masked-view/masked-view/RNCMaskedView.podspec`)"
+  - "RNCPushNotificationIOS (from `../../node_modules/@react-native-community/push-notification-ios/RNCPushNotificationIOS.podspec`)"
+  - "RNFBApp (from `../../node_modules/@react-native-firebase/app/RNFBApp.podspec`)"
+  - "RNFBMessaging (from `../../node_modules/@react-native-firebase/messaging/RNFBMessaging.podspec`)"
   - RNGestureHandler (from `../../node_modules/react-native-gesture-handler/RNGestureHandler.podspec`)
   - RNScreens (from `../../node_modules/react-native-screens/RNScreens.podspec`)
+  - "RNSentry (from `../../node_modules/@sentry/react-native/RNSentry.podspec`)"
   - Yoga (from `../../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
     - Base64
+    - Firebase
+    - FirebaseCore
+    - FirebaseCoreExtension
+    - FirebaseCoreInternal
+    - FirebaseInstallations
+    - FirebaseMessaging
     - fmt
+    - GoogleDataTransport
+    - GoogleUtilities
     - JWT
+    - nanopb
+    - PromisesObjC
+    - Sentry
     - SocketRocket
     - SSZipArchive
 
@@ -1223,6 +1325,8 @@ EXTERNAL SOURCES:
     :podspec: "../../node_modules/react-native-encrypted-storage/react-native-encrypted-storage.podspec"
   react-native-safe-area-context:
     :podspec: "../../node_modules/react-native-safe-area-context/react-native-safe-area-context.podspec"
+  react-native-select-contact:
+    :podspec: "../../node_modules/react-native-select-contact/react-native-select-contact.podspec"
   react-native-webview:
     :podspec: "../../node_modules/react-native-webview/react-native-webview.podspec"
   React-nativeconfig:
@@ -1269,10 +1373,18 @@ EXTERNAL SOURCES:
     :podspec: "../../node_modules/@react-native-async-storage/async-storage/RNCAsyncStorage.podspec"
   RNCMaskedView:
     :podspec: "../../node_modules/@react-native-masked-view/masked-view/RNCMaskedView.podspec"
+  RNCPushNotificationIOS:
+    :podspec: "../../node_modules/@react-native-community/push-notification-ios/RNCPushNotificationIOS.podspec"
+  RNFBApp:
+    :podspec: "../../node_modules/@react-native-firebase/app/RNFBApp.podspec"
+  RNFBMessaging:
+    :podspec: "../../node_modules/@react-native-firebase/messaging/RNFBMessaging.podspec"
   RNGestureHandler:
     :podspec: "../../node_modules/react-native-gesture-handler/RNGestureHandler.podspec"
   RNScreens:
     :podspec: "../../node_modules/react-native-screens/RNScreens.podspec"
+  RNSentry:
+    :podspec: "../../node_modules/@sentry/react-native/RNSentry.podspec"
   Yoga:
     :path: "../../node_modules/react-native/ReactCommon/yoga"
 
@@ -1283,10 +1395,20 @@ SPEC CHECKSUMS:
   DoubleConversion: fea03f2699887d960129cc54bba7e52542b6f953
   FBLazyVector: 84f6edbe225f38aebd9deaf1540a4160b1f087d7
   FBReactNativeSpec: 82e3ffa35276caaa92764b07bbe6f215b845eba1
+  Firebase: 10c8cb12fb7ad2ae0c09ffc86cd9c1ab392a0031
+  FirebaseCore: 28045c1560a2600d284b9c45a904fe322dc890b6
+  FirebaseCoreExtension: 0659f035b88c5a7a15a9763c48c2e6ca8c0a2977
+  FirebaseCoreInternal: bca337352024b18424a61e478460547d46c4c753
+  FirebaseInstallations: 763814908793c0da14c18b3dcffdec71e29ed55e
+  FirebaseMessaging: 06c414a21b122396a26847c523d5c370f8325df5
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
-  glog: 035f1e36e53b355cf70f6434d161b36e7d21fecd
+  glog: c5d68082e772fa1c511173d6b30a9de2c05a69a2
+  GoogleDataTransport: 6c09b596d841063d76d4288cc2d2f42cc36e1e2a
+  GoogleUtilities: d053d902a8edaa9904e1bd00c37535385b8ed152
   JWT: ef71dfb03e1f842081e64dc42eef0e164f35d251
-  PaciolanSDK: 90a9fcfba3348edc8ce5a083f6d5342cae1b544a
+  nanopb: d4d75c12cd1316f4a64e3c6963f879ecd4b5e0d5
+  PaciolanSDK: 6990c1eb874a53754e0ccec98ff5f63304636d9d
+  PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RCT-Folly: 7169b2b1c44399c76a47b5deaaba715eeeb476c0
   RCTRequired: ab7f915c15569f04a49669e573e6e319a53f9faa
   RCTTypeSafety: 63b97ced7b766865057e7154db0e81ce4ee6cf1e
@@ -1310,6 +1432,7 @@ SPEC CHECKSUMS:
   React-Mapbuffer: 114be72666d7e3e317c1a36fb566cd3ad712fcc8
   react-native-encrypted-storage: db300a3f2f0aba1e818417c1c0a6be549038deb7
   react-native-safe-area-context: 0ee144a6170530ccc37a0fd9388e28d06f516a89
+  react-native-select-contact: f88ccd9dbee6c4d1c32507291b431cf558a2ed42
   react-native-webview: dc191e100e5db2dbd3bc28793c789b95934904ca
   React-nativeconfig: ca8b90c736cf3be019cb332ca42d93dd95b32e05
   React-NativeModulesApple: 617b3435299de6474cd12f0c1a743ec214777d79
@@ -1333,12 +1456,17 @@ SPEC CHECKSUMS:
   ReactCommon: f2262c062dc77bd01d44bc24fb69c1ad4e852f1f
   RNCAsyncStorage: 618d03a5f52fbccb3d7010076bc54712844c18ef
   RNCMaskedView: 090213d32d8b3bb83a4dcb7d12c18f0152591906
+  RNCPushNotificationIOS: 64218f3c776c03d7408284a819b2abfda1834bc8
+  RNFBApp: a3e139715386fe79a09c387f2dbeb6890eb05b39
+  RNFBMessaging: a65862d8eba03cb6c838241bd328166504996894
   RNGestureHandler: 7feb85c5a30ebbcd4d5c7a851ba9e7eafb9860cb
-  RNScreens: 3a45abbd45f7f0e9e3686b1022ead3d41f4e1cff
+  RNScreens: 2b73f5eb2ac5d94fbd61fa4be0bfebd345716825
+  RNSentry: a9a35e6f4eb418e041469fa4de50644dbddb1b74
+  Sentry: 2f6baed15a3f8056b875fc903dc3dcb2903117f4
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
   Yoga: 1b901a6d6eeba4e8a2e8f308f708691cdb5db312
 
-PODFILE CHECKSUM: d3a0f7e324062c0fb29be8c749ff4f141c154f62
+PODFILE CHECKSUM: bfff31dea89a4df7376cdd902e62ded7ea1b0483
 
 COCOAPODS: 1.15.2

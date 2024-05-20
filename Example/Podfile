@@ -21,6 +21,12 @@ react_native_encrypted_storage_path = File.join(node_modules_path, 'react-native
 react_native_safe_area_context_path = File.join(node_modules_path, 'react-native-safe-area-context/react-native-safe-area-context.podspec')
 react_native_webview_path = File.join(node_modules_path, 'react-native-webview/react-native-webview.podspec')
 react_native_code_push_path = File.join(node_modules_path, 'react-native-code-push/CodePush.podspec')
+sentry_react_native_path = File.join(node_modules_path, '@sentry/react-native/RNSentry.podspec')
+react_native_push_notification_ios_path = File.join(node_modules_path, '@react-native-community/push-notification-ios/RNCPushNotificationIOS.podspec')
+react_native_select_contact_path = File.join(node_modules_path, 'react-native-select-contact/react-native-select-contact.podspec')
+react_native_firebase_app = File.join(node_modules_path, '@react-native-firebase/app/RNFBApp.podspec')
+react_native_firebase_messaging = File.join(node_modules_path, '@react-native-firebase/messaging/RNFBMessaging.podspec')
+
 
 use_frameworks!
 target 'PaciolanSDK_Example' do
@@ -35,6 +41,11 @@ target 'PaciolanSDK_Example' do
   pod 'react-native-safe-area-context', podspec: react_native_safe_area_context_path
   pod 'react-native-webview', podspec: react_native_webview_path
   pod 'CodePush', podspec: react_native_code_push_path
+  pod 'RNSentry', podspec: sentry_react_native_path
+  pod 'RNCPushNotificationIOS', podspec: react_native_push_notification_ios_path
+  pod 'react-native-select-contact', podspec: react_native_select_contact_path
+  pod 'RNFBApp', podspec: react_native_firebase_app
+  pod 'RNFBMessaging', podspec: react_native_firebase_messaging
 
   config = use_native_modules!
 
@@ -45,7 +56,6 @@ target 'PaciolanSDK_Example' do
     :flipper_configuration => flipper_config,
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
-
 
   post_install do |installer|
     # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202

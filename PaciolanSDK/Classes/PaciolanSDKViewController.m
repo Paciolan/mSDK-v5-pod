@@ -15,6 +15,10 @@
 #import <React/RCTLog.h>
 #import <React/RCTEventDispatcher.h>
 #import <React/RCTEventEmitter.h>
+#import <CodePush/CodePush.h>
+
+
+@import Sentry;
 
 @interface PaciolanSDKViewController () <RCTBridgeDelegate, RCTBridgeModule>
 @end
@@ -23,24 +27,43 @@
 @end
 
 @implementation PaciolanSDKViewController
-
+@synthesize config;
 static TokenCallback tokenCallback;
 
 RCT_EXPORT_MODULE()
 
+
++ (BOOL)requiresMainQueueSetup {
+    return YES; // Set to YES if your module requires main queue setup
+}
+
 - (void)viewDidLoad {
    [super viewDidLoad];
     RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:@{}];
-    RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge moduleName:@"PaciolanSDK" initialProperties:nil];
+    RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge moduleName:@"PaciolanSDK" initialProperties:@{@"configString":config}];
     self.view = rootView;
+
+    // Sentry config initialization.
+    [SentrySDK startWithConfigureOptions:^(SentryOptions *options) {
+        options.dsn = @"https://dummyurl";
+        options.enableTracing = YES;
+    }];
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge {
+    [CodePush overrideAppVersion: @"5.0"];
+    return [CodePush bundleURLForResource:@"PaciolanSDK"
+                                    withExtension:@"js"
+                                     subdirectory:nil
+                                           bundle:[NSBundle bundleForClass:[self class]]];
+}
 
-    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-    NSURL *url = [bundle URLForResource:@"PaciolanSDK" withExtension:@"js"];
-    return url;
-
+- (id) initWithString: (NSString*) initializationConfig {
+    self = [super init];
+    if (self) {
+        config = initializationConfig;
+    }
+    return self;
 }
 
 RCT_EXPORT_METHOD(navAwayFromPac:(NSString *)response resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
@@ -67,5 +90,24 @@ RCT_EXPORT_METHOD(storeToken:(NSString *)token)
         tokenCallback(token);
     }
 };
+
+RCT_EXPORT_METHOD(exitApp)
+{
+    printf("Leaving the App");
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        [RCTPresentedViewController() dismissViewControllerAnimated:false completion:nil];
+    });
+};
+
+RCT_EXPORT_METHOD(appLaunched:(NSString *)response resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
+    // Define a callback block to handle the response from JavaScript
+    void (^jsResponseHandler)(BOOL) = ^(BOOL jsResponse) {
+        NSLog(@"Received response from JavaScript: %d", jsResponse);
+        resolve(@YES);
+    };
+
+    // Send event to JavaScript
+    [[PaciolanSDKEventEmitter allocWithZone: NULL] sendEventToJS:@"AppLaunchedEvent" callback:jsResponseHandler];
+}
 
 @end

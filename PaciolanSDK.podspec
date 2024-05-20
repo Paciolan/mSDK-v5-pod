@@ -17,11 +17,13 @@ Pod::Spec.new do |s|
   s.license          = { type: 'No License' }
   s.author           = { 'Paciolan Mobile Team' => 'pacmobile@paciolan.com' }
   s.source           = { :git => 'https://github.com/Paciolan/mSDK-v5-pod.git', :tag => s.version.to_s } 
-  s.source_files = 'PaciolanSDK/Classes/**/*.{h,m,swift}'
-  s.resources      = 'PaciolanSDK/Assets/{PaciolanSDK.js,assets}'
+  s.source_files     = 'PaciolanSDK/Classes/**/*.{h,m,swift}'
+  s.resources        = 'PaciolanSDK/Assets/{PaciolanSDK.js,assets}'
   s.ios.resource_bundles = { 'PaciolanSDK' => ['PaciolanSDK/Assets/{PaciolanSDK.js,assets}'] }
-  s.platform       = :ios, '13.4'
+  s.platform         = :ios, '13.4'
 
+  # To run this locally, you need to change the yoga version to `1.14.0`
+  # and change 
   yoga_version = '1.14.1'
   
   extra_dependencies = [
@@ -85,7 +87,12 @@ Pod::Spec.new do |s|
     '../node_modules/react-native-screens/RNScreens.podspec',
     '../node_modules/react-native-safe-area-context/react-native-safe-area-context.podspec',
     '../node_modules/react-native-webview/react-native-webview.podspec',
-    '../node_modules/react-native-code-push/CodePush.podspec'
+    '../node_modules/react-native-code-push/CodePush.podspec',
+    '../node_modules/@sentry/react-native/RNSentry.podspec',
+    '../node_modules/@react-native-community/push-notification-ios/RNCPushNotificationIOS.podspec',
+    '../node_modules/react-native-select-contact/react-native-select-contact.podspec',
+    '../node_modules/@react-native-firebase/app/RNFBApp.podspec',
+    '../node_modules/@react-native-firebase/messaging/RNFBMessaging.podspec'
   ]
 
   podspecs = core + core_dependencies + core_dependencies_dependencies + third_party_dependencies + msdk_dependencies
@@ -99,4 +106,6 @@ Pod::Spec.new do |s|
       s.dependency spec.name, "#{spec.version}"
     end
   end
+
+  s.dependency "Sentry", "8.24.0"
 end

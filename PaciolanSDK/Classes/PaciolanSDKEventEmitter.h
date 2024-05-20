@@ -5,5 +5,5 @@
 
 - (void)sendEventToJS:(NSString *)eventName callback:(void (^)(BOOL))callback;
 - (void)receiveResponseFromJS:(BOOL)response;
-
+- (bool) hasListeners;
 @end
