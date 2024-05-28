@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42485C7CFCEC28156EF9F6D9 /* Pods_PaciolanSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4212C7EA6FBBFC33ACFE5E3F /* Pods_PaciolanSDK_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -23,6 +22,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		ED40909F297A85F9391183BF /* Pods_PaciolanSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F638C3C2F903D0E9AA900385 /* Pods_PaciolanSDK_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		269D2C80E9526B89856A7781 /* Pods-PaciolanSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaciolanSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-PaciolanSDK_Example/Pods-PaciolanSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		29101E904E798B7D41C8BC92 /* PaciolanSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PaciolanSDK.podspec; path = ../PaciolanSDK.podspec; sourceTree = "<group>"; };
-		390864DF0A152A8DE545BD55 /* Pods-PaciolanSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaciolanSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-PaciolanSDK_Example/Pods-PaciolanSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		4212C7EA6FBBFC33ACFE5E3F /* Pods_PaciolanSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaciolanSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		386BBDDC38AE59FF9130FA96 /* Pods-PaciolanSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaciolanSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-PaciolanSDK_Example/Pods-PaciolanSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		40650648863537FE0011AE08 /* Pods-PaciolanSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaciolanSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-PaciolanSDK_Example/Pods-PaciolanSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PaciolanSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaciolanSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,6 +62,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7FD9466F8E2F2391754EFDD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E6FB58DBC1827D7B6AB8D05A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F638C3C2F903D0E9AA900385 /* Pods_PaciolanSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaciolanSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				42485C7CFCEC28156EF9F6D9 /* Pods_PaciolanSDK_Example.framework in Frameworks */,
+				ED40909F297A85F9391183BF /* Pods_PaciolanSDK_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +118,7 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				4212C7EA6FBBFC33ACFE5E3F /* Pods_PaciolanSDK_Example.framework */,
+				F638C3C2F903D0E9AA900385 /* Pods_PaciolanSDK_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,8 +182,8 @@
 		EB65793070C1990B6BFE7280 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				390864DF0A152A8DE545BD55 /* Pods-PaciolanSDK_Example.debug.xcconfig */,
-				269D2C80E9526B89856A7781 /* Pods-PaciolanSDK_Example.release.xcconfig */,
+				40650648863537FE0011AE08 /* Pods-PaciolanSDK_Example.debug.xcconfig */,
+				386BBDDC38AE59FF9130FA96 /* Pods-PaciolanSDK_Example.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -195,11 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "PaciolanSDK_Example" */;
 			buildPhases = (
-				B9926734CDE825B1767CFF89 /* [CP] Check Pods Manifest.lock */,
+				CEB4A6ABB4669E930F72A1B0 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				9EE5C88DCC98501372A7C25C /* [CP] Embed Pods Frameworks */,
+				1D85987673FD57BDF98C2FE5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,7 +289,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9EE5C88DCC98501372A7C25C /* [CP] Embed Pods Frameworks */ = {
+		1D85987673FD57BDF98C2FE5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,6 +359,7 @@
 				"${BUILT_PRODUCTS_DIR}/react-native-encrypted-storage/react_native_encrypted_storage.framework",
 				"${BUILT_PRODUCTS_DIR}/react-native-safe-area-context/react_native_safe_area_context.framework",
 				"${BUILT_PRODUCTS_DIR}/react-native-select-contact/react_native_select_contact.framework",
+				"${BUILT_PRODUCTS_DIR}/react-native-wallet-manager/react_native_wallet_manager.framework",
 				"${BUILT_PRODUCTS_DIR}/react-native-webview/react_native_webview.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -426,6 +427,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/react_native_encrypted_storage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/react_native_safe_area_context.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/react_native_select_contact.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/react_native_wallet_manager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/react_native_webview.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +435,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaciolanSDK_Example/Pods-PaciolanSDK_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B9926734CDE825B1767CFF89 /* [CP] Check Pods Manifest.lock */ = {
+		CEB4A6ABB4669E930F72A1B0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -627,7 +629,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 390864DF0A152A8DE545BD55 /* Pods-PaciolanSDK_Example.debug.xcconfig */;
+			baseConfigurationReference = 40650648863537FE0011AE08 /* Pods-PaciolanSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5844ZU9Q8E;
@@ -644,7 +646,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 269D2C80E9526B89856A7781 /* Pods-PaciolanSDK_Example.release.xcconfig */;
+			baseConfigurationReference = 386BBDDC38AE59FF9130FA96 /* Pods-PaciolanSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5844ZU9Q8E;

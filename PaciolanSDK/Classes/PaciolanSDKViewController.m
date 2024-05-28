@@ -45,7 +45,7 @@ RCT_EXPORT_MODULE()
 
     // Sentry config initialization.
     [SentrySDK startWithConfigureOptions:^(SentryOptions *options) {
-        options.dsn = @"https://dummyurl";
+        options.dsn = @"https://ba958772038a40ff97d7a79d9e4d0e07@o361452.ingest.us.sentry.io/3858620";
         options.enableTracing = YES;
     }];
 }
