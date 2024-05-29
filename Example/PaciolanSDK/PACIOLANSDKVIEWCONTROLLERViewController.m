@@ -34,8 +34,9 @@
 
 - (IBAction)launchSDK:(UIButton *)sender {
     NSString* config = @"{\"applicationId\": \"\", \"channelCode\": \"qamanual72\", \"distributorCode\": \"AMTX\", \"organizationId\": \"129\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#388edf\"}}";
+    NSString* configPROD = @"{\"applicationId\": \"\", \"channelCode\": \"msdk-sa\", \"distributorCode\": \"CLASS\", \"organizationId\": \"237\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#388edf\"}}";
     
-    PaciolanSDKViewController *childViewController = [[PaciolanSDKViewController alloc] initWithString:config];
+    PaciolanSDKViewController *childViewController = [[PaciolanSDKViewController alloc] initWithString:configPROD];
     [self addChildViewController:childViewController];
     [self.view addSubview:childViewController.view];
     [childViewController didMoveToParentViewController:self];
