@@ -96,6 +96,7 @@ RCT_EXPORT_METHOD(exitApp)
     printf("Leaving the App");
     dispatch_sync(dispatch_get_main_queue(), ^{
         [RCTPresentedViewController() dismissViewControllerAnimated:false completion:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ExitAppNotification" object:nil userInfo:@{@"message": @"Exiting the app"}];
     });
 };
 
