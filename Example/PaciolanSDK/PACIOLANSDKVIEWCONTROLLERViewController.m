@@ -32,11 +32,12 @@
     [viewController didMoveToParentViewController:self];
 }
 
-- (IBAction)launchSDK:(UIButton *)sender {
+
+- (IBAction)manageTickets:(UIButton *)sender {
     NSString* config = @"{\"applicationId\": \"\", \"channelCode\": \"qamanual72\", \"distributorCode\": \"AMTX\", \"organizationId\": \"129\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#388edf\"}}";
-    NSString* configPROD = @"{\"applicationId\": \"\", \"channelCode\": \"msdk-sa\", \"distributorCode\": \"CLASS\", \"organizationId\": \"237\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#388edf\"}}";
+    NSString* configProd = @"{\"applicationId\": \"\", \"channelCode\": \"msdk-sa\", \"distributorCode\": \"CLASS\", \"organizationId\": \"237\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"},  \"uiOptions\": {\"accentColor\": \"#388edf\", \"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\"}}";
     
-    PaciolanSDKViewController *childViewController = [[PaciolanSDKViewController alloc] initWithString:configPROD];
+    PaciolanSDKViewController *childViewController = [[PaciolanSDKViewController alloc] initWithString:configProd];
     [self addChildViewController:childViewController];
     [self.view addSubview:childViewController.view];
     [childViewController didMoveToParentViewController:self];
@@ -45,19 +46,50 @@
     childViewController.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
 
     // Create a button in the parentViewController
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"Click Me!" forState:UIControlStateNormal];
-    [button setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-    button.backgroundColor = UIColor.systemBlueColor;
-    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-
-    CGFloat buttonWidth = self.view.bounds.size.width;
-    CGFloat buttonHeight = 150;
-    CGFloat buttonX = 0;
-    CGFloat buttonY = CGRectGetMaxY(self.view.frame) - buttonHeight;
-    button.frame = CGRectMake(buttonX, buttonY, buttonWidth, buttonHeight);
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [button setTitle:@"Click Me!" forState:UIControlStateNormal];
+//    [button setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+//    button.backgroundColor = UIColor.systemBlueColor;
+//    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:button];
+//
+//    CGFloat buttonWidth = self.view.bounds.size.width;
+//    CGFloat buttonHeight = 150;
+//    CGFloat buttonX = 0;
+//    CGFloat buttonY = CGRectGetMaxY(self.view.frame) - buttonHeight;
+//    button.frame = CGRectMake(buttonX, buttonY, buttonWidth, buttonHeight);
+    
 }
+
+- (IBAction)buyTickets:(UIButton *)sender {
+    NSString* config = @"{\"applicationId\": \"\", \"channelCode\": \"qamanual72\", \"distributorCode\": \"AMTX\", \"organizationId\": \"129\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"event-list\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#388edf\"}}";
+    NSString* configProd = @"{\"applicationId\": \"\", \"channelCode\": \"msdk-sa\", \"distributorCode\": \"CLASS\", \"organizationId\": \"237\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"},  \"uiOptions\": {\"accentColor\": \"#388edf\", \"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\"}}";
+    
+    PaciolanSDKViewController *childViewController = [[PaciolanSDKViewController alloc] initWithString:configProd];
+    [self addChildViewController:childViewController];
+    [self.view addSubview:childViewController.view];
+    [childViewController didMoveToParentViewController:self];
+    self.paciolanSDKViewController = childViewController;
+
+    childViewController.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
+
+    // Create a button in the parentViewController
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [button setTitle:@"Click Me!" forState:UIControlStateNormal];
+//    [button setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+//    button.backgroundColor = UIColor.systemBlueColor;
+//    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:button];
+//
+//    CGFloat buttonWidth = self.view.bounds.size.width;
+//    CGFloat buttonHeight = 150;
+//    CGFloat buttonX = 0;
+//    CGFloat buttonY = CGRectGetMaxY(self.view.frame) - buttonHeight;
+//    button.frame = CGRectMake(buttonX, buttonY, buttonWidth, buttonHeight);
+}
+
+
+
 
 - (void)buttonClicked:(UIButton *)sender {
     NSLog(@"Button Clicked!");

@@ -27,6 +27,7 @@ react_native_select_contact_path = File.join(node_modules_path, 'react-native-se
 react_native_firebase_app = File.join(node_modules_path, '@react-native-firebase/app/RNFBApp.podspec')
 react_native_firebase_messaging = File.join(node_modules_path, '@react-native-firebase/messaging/RNFBMessaging.podspec')
 react_native_wallet_manager = File.join(node_modules_path, 'react-native-wallet-manager/react-native-wallet-manager.podspec')
+react_native_screenshot_prevent = File.join(node_modules_path, 'react-native-screenshot-prevent/RNScreenshotPrevent.podspec')
 
 
 use_frameworks!
@@ -48,6 +49,7 @@ target 'PaciolanSDK_Example' do
   pod 'RNFBApp', podspec: react_native_firebase_app
   pod 'RNFBMessaging', podspec: react_native_firebase_messaging
   pod 'react-native-wallet-manager', podspec: react_native_wallet_manager
+  pod 'RNScreenshotPrevent', podspec: react_native_screenshot_prevent
 
   config = use_native_modules!
 
