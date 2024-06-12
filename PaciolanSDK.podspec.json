@@ -1,9 +1,9 @@
 {
   "name": "PaciolanSDK",
-  "version": "5.103.0",
+  "version": "5.104.0",
   "summary": "Pod Component for Paciolan Mobile SDK",
   "description": "This pod allows us to install the Paciolan react native SDK ViewController into an iOS app.",
-  "homepage": "https://github.com/Paciolan/mSDK-pod",
+  "homepage": "https://github.com/Paciolan/mSDK-v5-pod",
   "license": {
     "type": "No License"
   },
@@ -11,8 +11,8 @@
     "Paciolan Mobile Team": "pacmobile@paciolan.com"
   },
   "source": {
-    "git": "https://github.com/Paciolan/mSDK-pod.git",
-    "tag": "5.103.0"
+    "git": "https://github.com/Paciolan/mSDK-v5-pod.git",
+    "tag": "5.104.0"
   },
   "source_files": "PaciolanSDK/Classes/**/*.{h,m,swift}",
   "resources": "PaciolanSDK/Assets/{PaciolanSDK.js,assets}",
@@ -71,6 +71,12 @@
     "react-native-webview": ["13.8.1"],
     "CodePush": ["8.2.1"],
     "RNSentry": ["5.22.0"],
+    "RNCPushNotificationIOS": ["1.11.0"],
+    "react-native-select-contact": ["1.6.3"],
+    "RNFBApp": ["19.3.0"],
+    "RNFBMessaging": ["19.3.0"],
+    "react-native-wallet-manager": ["0.0.7"],
+    "RNScreenshotPrevent": ["1.2.1"],
     "Sentry": ["8.24.0"]
   }
 }
