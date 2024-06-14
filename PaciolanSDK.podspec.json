@@ -76,7 +76,6 @@
     "RNFBApp": ["19.3.0"],
     "RNFBMessaging": ["19.3.0"],
     "react-native-wallet-manager": ["0.0.7"],
-    "RNScreenshotPrevent": ["1.2.1"],
     "Sentry": ["8.24.0"]
   }
 }

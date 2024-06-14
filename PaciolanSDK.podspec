@@ -93,8 +93,7 @@ Pod::Spec.new do |s|
     '../node_modules/react-native-select-contact/react-native-select-contact.podspec',
     '../node_modules/@react-native-firebase/app/RNFBApp.podspec',
     '../node_modules/@react-native-firebase/messaging/RNFBMessaging.podspec',
-    '../node_modules/react-native-wallet-manager/react-native-wallet-manager.podspec',
-    '../node_modules/react-native-screenshot-prevent/RNScreenshotPrevent.podspec'
+    '../node_modules/react-native-wallet-manager/react-native-wallet-manager.podspec'
   ]
 
   podspecs = core + core_dependencies + core_dependencies_dependencies + third_party_dependencies + msdk_dependencies
