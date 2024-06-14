@@ -35,9 +35,8 @@
 
 - (IBAction)manageTickets:(UIButton *)sender {
     NSString* config = @"{\"applicationId\": \"\", \"channelCode\": \"qamanual72\", \"distributorCode\": \"AMTX\", \"organizationId\": \"129\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#388edf\"}}";
-    NSString* configProd = @"{\"applicationId\": \"\", \"channelCode\": \"msdk-sa\", \"distributorCode\": \"CLASS\", \"organizationId\": \"237\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"},  \"uiOptions\": {\"accentColor\": \"#388edf\", \"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\"}}";
     
-    PaciolanSDKViewController *childViewController = [[PaciolanSDKViewController alloc] initWithString:configProd];
+    PaciolanSDKViewController *childViewController = [[PaciolanSDKViewController alloc] initWithString:config];
     [self addChildViewController:childViewController];
     [self.view addSubview:childViewController.view];
     [childViewController didMoveToParentViewController:self];
@@ -63,9 +62,8 @@
 
 - (IBAction)buyTickets:(UIButton *)sender {
     NSString* config = @"{\"applicationId\": \"\", \"channelCode\": \"qamanual72\", \"distributorCode\": \"AMTX\", \"organizationId\": \"129\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"event-list\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#388edf\"}}";
-    NSString* configProd = @"{\"applicationId\": \"\", \"channelCode\": \"msdk-sa\", \"distributorCode\": \"CLASS\", \"organizationId\": \"237\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"},  \"uiOptions\": {\"accentColor\": \"#388edf\", \"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\"}}";
     
-    PaciolanSDKViewController *childViewController = [[PaciolanSDKViewController alloc] initWithString:configProd];
+    PaciolanSDKViewController *childViewController = [[PaciolanSDKViewController alloc] initWithString:config];
     [self addChildViewController:childViewController];
     [self.view addSubview:childViewController.view];
     [childViewController didMoveToParentViewController:self];
