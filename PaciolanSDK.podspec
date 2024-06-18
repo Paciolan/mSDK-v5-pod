@@ -22,8 +22,7 @@ Pod::Spec.new do |s|
   s.ios.resource_bundles = { 'PaciolanSDK' => ['PaciolanSDK/Assets/{PaciolanSDK.js,assets}'] }
   s.platform         = :ios, '13.4'
 
-  # To run this locally, you need to change the yoga version to `1.14.0`
-  # and change 
+  # To run the example app locally, you need to change the yoga version to `1.14.0`
   yoga_version = '1.14.1'
   
   extra_dependencies = [
