@@ -45,19 +45,18 @@
     childViewController.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
 
     // Create a button in the parentViewController
-//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [button setTitle:@"Click Me!" forState:UIControlStateNormal];
-//    [button setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-//    button.backgroundColor = UIColor.systemBlueColor;
-//    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:button];
-//
-//    CGFloat buttonWidth = self.view.bounds.size.width;
-//    CGFloat buttonHeight = 150;
-//    CGFloat buttonX = 0;
-//    CGFloat buttonY = CGRectGetMaxY(self.view.frame) - buttonHeight;
-//    button.frame = CGRectMake(buttonX, buttonY, buttonWidth, buttonHeight);
-    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"Click Me!" forState:UIControlStateNormal];
+    [button setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+    button.backgroundColor = UIColor.systemBlueColor;
+    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+
+    CGFloat buttonWidth = self.view.bounds.size.width;
+    CGFloat buttonHeight = 100;
+    CGFloat buttonX = 0;
+    CGFloat buttonY = CGRectGetMaxY(self.view.frame) - buttonHeight;
+    button.frame = CGRectMake(buttonX, buttonY, buttonWidth, buttonHeight);
 }
 
 - (IBAction)buyTickets:(UIButton *)sender {
