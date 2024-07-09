@@ -91,9 +91,9 @@
 - (void)buttonClicked:(UIButton *)sender {
     NSLog(@"Button Clicked!");
     
-    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [self.paciolanSDKViewController appLaunched:nil resolver:nil rejecter:nil];
-    });
+//    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        [self.paciolanSDKViewController appLaunched:nil resolver:nil rejecter:nil];
+//    });
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         // Call the navAwayFromPac method without providing the response parameter
