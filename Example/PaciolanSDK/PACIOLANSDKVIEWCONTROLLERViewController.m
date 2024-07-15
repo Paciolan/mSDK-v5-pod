@@ -41,6 +41,9 @@
     [self.view addSubview:childViewController.view];
     [childViewController didMoveToParentViewController:self];
     self.paciolanSDKViewController = childViewController;
+    [self.paciolanSDKViewController setTokenListener:^(NSString *token) {
+        NSLog(@"Token received from JS: %@", token);
+    }];
 
     childViewController.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
 
