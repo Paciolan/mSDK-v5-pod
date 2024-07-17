@@ -34,7 +34,7 @@
 
 
 - (IBAction)manageTickets:(UIButton *)sender {
-    NSString* config = @"{\"applicationId\": \"\", \"channelCode\": \"qamanual72\", \"distributorCode\": \"AMTX\", \"organizationId\": \"129\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#388edf\"}}";
+    NSString* config = @"{\"applicationId\": \"\", \"channelCode\": \"msdk-sa\", \"distributorCode\": \"CLASS\", \"organizationId\": \"237\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#388edf\"}}";
     
     PaciolanSDKViewController *childViewController = [[PaciolanSDKViewController alloc] initWithString:config];
     [self addChildViewController:childViewController];
@@ -100,7 +100,7 @@
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         // Call the navAwayFromPac method without providing the response parameter
-        [[PaciolanSDKViewController alloc] navAwayFromPac:nil resolver:^(id result) {
+        [self.paciolanSDKViewController navAwayFromPac:nil resolver:^(id result) {
             NSLog(@"Parent App Success: %@", result);
         } rejecter:^(NSString *code, NSString *message, NSError *error) {
             NSLog(@"Parent App Error: %@ - %@", code, message);
