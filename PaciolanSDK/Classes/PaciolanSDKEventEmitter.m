@@ -41,9 +41,18 @@ RCT_EXPORT_MODULE();
     
     if(hasListeners){
       NSLog(@"eventName... %@", eventName);
-     [self sendEventWithName:eventName body:nil];
+      [self sendEventWithName:eventName body:nil];
     } else {
         NSLog(@"No listeners...");
+        @try {
+            NSLog(@"Sending event to JS anyway.");
+            [self sendEventWithName:eventName body:nil];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Error while seding event to JS, calling callback with true to allow navigation.");
+            NSLog(@"%@", exception.reason);
+            callback(true);
+        }
     }
 }
 
