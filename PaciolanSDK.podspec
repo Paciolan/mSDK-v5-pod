@@ -107,5 +107,5 @@ Pod::Spec.new do |s|
     end
   end
 
-  s.dependency "Sentry", "8.24.0"
+  s.dependency "Sentry", "8.30.1"
 end
