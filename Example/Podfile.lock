@@ -80,7 +80,7 @@ PODS:
     - nanopb/encode (= 2.30910.0)
   - nanopb/decode (2.30910.0)
   - nanopb/encode (2.30910.0)
-  - PaciolanSDK (5.0.11):
+  - PaciolanSDK (5.111.0):
     - boost (= 1.83.0)
     - CodePush (= 8.2.1)
     - DoubleConversion (= 1.1.6)
@@ -1172,6 +1172,7 @@ PODS:
     - glog
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
+    - React-RCTImage
   - RNSentry (5.25.0):
     - React-Core
     - Sentry/HybridSDK (= 8.30.0)
@@ -1408,12 +1409,12 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 913cf60d0400ebd5d6b63a28b290372ab44590dd
   FirebaseMessaging: 4d52717dd820707cc4eadec5eb981b4832ec8d5d
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
-  glog: 035f1e36e53b355cf70f6434d161b36e7d21fecd
+  glog: c5d68082e772fa1c511173d6b30a9de2c05a69a2
   GoogleDataTransport: 6c09b596d841063d76d4288cc2d2f42cc36e1e2a
   GoogleUtilities: ea963c370a38a8069cc5f7ba4ca849a60b6d7d15
   JWT: ef71dfb03e1f842081e64dc42eef0e164f35d251
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
-  PaciolanSDK: b950648f0da549c4a1064ff5e50681d59d731440
+  PaciolanSDK: 6cc725ce1bdb810a7bf33240efa8d9b9f529aeb7
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RCT-Folly: 7169b2b1c44399c76a47b5deaaba715eeeb476c0
   RCTRequired: ab7f915c15569f04a49669e573e6e319a53f9faa
@@ -1467,7 +1468,7 @@ SPEC CHECKSUMS:
   RNFBApp: dd35ba8340b89c36e42c4c137915c01d3c792143
   RNFBMessaging: c8d34d9ad44a3258a77e548bba6dc3561af7cf2d
   RNGestureHandler: 7feb85c5a30ebbcd4d5c7a851ba9e7eafb9860cb
-  RNScreens: 2b73f5eb2ac5d94fbd61fa4be0bfebd345716825
+  RNScreens: 3a45abbd45f7f0e9e3686b1022ead3d41f4e1cff
   RNSentry: 22b024a5471e416032f157a906467499b5b25d26
   Sentry: 37b29280c25d35e49850151b65a27786d94e1a19
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
