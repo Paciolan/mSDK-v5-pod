@@ -35,82 +35,33 @@
 
 - (IBAction)manageTickets:(UIButton *)sender {
     // QFNQ
-    NSString* config = @"{\"applicationId\": \"\", \"channelCode\": \"qamanual72\", \"distributorCode\": \"AMTX\", \"organizationId\": \"129\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#388edf\"}}";
+//    NSString* config = @"{\"applicationId\": \"\", \"channelCode\": \"qamanual72\", \"distributorCode\": \"AMTX\", \"organizationId\": \"129\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#cc0000\"}}";
 
     // PROD
-    // NSString* config = @"{\"applicationId\": \"\", \"channelCode\": \"msdk-sa\", \"distributorCode\": \"CICD80\", \"organizationId\": \"390\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"}, \"uiOptions\": {\"logoImage\": \"https://wsucougars.com/images/logos/site/wasington_state_app_logo.png\", \"accentColor\": \"#388edf\"}}";
+     NSString* config = @"{\"applicationId\": \"\", \"channelCode\": \"msdk-sa\", \"distributorCode\": \"CICD80\", \"organizationId\": \"390\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"ticket-management\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#cc0000\"}}";
     
-    PaciolanSDKViewController *childViewController = [[PaciolanSDKViewController alloc] initWithString:config];
-    [self addChildViewController:childViewController];
-    [self.view addSubview:childViewController.view];
-    [childViewController didMoveToParentViewController:self];
-    self.paciolanSDKViewController = childViewController;
+    PaciolanSDKViewController *viewController = [[PaciolanSDKViewController alloc] initWithString:config];
+    [self presentModalViewController:viewController animated:YES];
     [self.paciolanSDKViewController setTokenListener:^(NSString *token) {
         NSLog(@"Token received from JS: %@", token);
     }];
-
-    childViewController.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
-
-    // Create a button in the parentViewController
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"Click Me!" forState:UIControlStateNormal];
-    [button setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-    button.backgroundColor = UIColor.systemBlueColor;
-    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-
-    CGFloat buttonWidth = self.view.bounds.size.width;
-    CGFloat buttonHeight = 100;
-    CGFloat buttonX = 0;
-    CGFloat buttonY = CGRectGetMaxY(self.view.frame) - buttonHeight;
-    button.frame = CGRectMake(buttonX, buttonY, buttonWidth, buttonHeight);
 }
 
 - (IBAction)buyTickets:(UIButton *)sender {
-    NSString* config = @"{\"applicationId\": \"\", \"channelCode\": \"qamanual72\", \"distributorCode\": \"AMTX\", \"organizationId\": \"129\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"event-list\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#388edf\"}}";
+    // QFNQ
+//    NSString* config = @"{\"applicationId\": \"\", \"channelCode\": \"qamanual72\", \"distributorCode\": \"AMTX\", \"organizationId\": \"129\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"event-list\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#cc0000\"}}";
+
+    // PROD
+     NSString* config = @"{\"applicationId\": \"\", \"channelCode\": \"msdk-sa\", \"distributorCode\": \"CICD80\", \"organizationId\": \"390\", \"sdkKey\": \"test2\", \"route\": {\"name\": \"event-list\"}, \"uiOptions\": {\"logoImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\", \"accentColor\": \"#cc0000\"}}";
     
-    PaciolanSDKViewController *childViewController = [[PaciolanSDKViewController alloc] initWithString:config];
-    [self addChildViewController:childViewController];
-    [self.view addSubview:childViewController.view];
-    [childViewController didMoveToParentViewController:self];
-    self.paciolanSDKViewController = childViewController;
-
-    childViewController.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
-
-    // Create a button in the parentViewController
-//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [button setTitle:@"Click Me!" forState:UIControlStateNormal];
-//    [button setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-//    button.backgroundColor = UIColor.systemBlueColor;
-//    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:button];
-//
-//    CGFloat buttonWidth = self.view.bounds.size.width;
-//    CGFloat buttonHeight = 150;
-//    CGFloat buttonX = 0;
-//    CGFloat buttonY = CGRectGetMaxY(self.view.frame) - buttonHeight;
-//    button.frame = CGRectMake(buttonX, buttonY, buttonWidth, buttonHeight);
+    PaciolanSDKViewController *viewController = [[PaciolanSDKViewController alloc] initWithString:config];
+    [self presentModalViewController:viewController animated:YES];
+    [self.paciolanSDKViewController setTokenListener:^(NSString *token) {
+        NSLog(@"Token received from JS: %@", token);
+    }];
 }
 
 
-
-
-- (void)buttonClicked:(UIButton *)sender {
-    NSLog(@"Button Clicked!");
-    
-//    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        [self.paciolanSDKViewController appLaunched:nil resolver:nil rejecter:nil];
-//    });
-
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        // Call the navAwayFromPac method without providing the response parameter
-        [self.paciolanSDKViewController navAwayFromPac:nil resolver:^(id result) {
-            NSLog(@"Parent App Success: %@", result);
-        } rejecter:^(NSString *code, NSString *message, NSError *error) {
-            NSLog(@"Parent App Error: %@ - %@", code, message);
-        }];
-    });
-}
 
 - (void)didReceiveMemoryWarning
 {
