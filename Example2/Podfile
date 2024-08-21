@@ -66,5 +66,8 @@ target 'SamplePaciolanSwiftUI' do
       "../#{config[:reactNativePath]}",
       :mac_catalyst_enabled => false
     )
+    puts "Running post-install to fix react-native-select-contact"
+    system('perl -i -pe "BEGIN{undef $/;} s/UIViewController.*:nil\\];/dispatch_async\\(dispatch_get_main_queue\\(\\), ^{ UIViewController *picker = \\[\\[CNContactPickerViewController alloc\\] init\\]; \\(\\(CNContactPickerViewController *\\)picker\\).delegate = self; UIViewController *root = \\[UIApplication sharedApplication\\].keyWindow.rootViewController ? \\[UIApplication sharedApplication\\].keyWindow.rootViewController : \\[\\[\\[UIApplication sharedApplication\\] delegate\\] window\\].rootViewController; while\\(root.presentedViewController\\) { root = root.presentedViewController; } \\[root presentViewController:picker animated:YES completion:nil\\]; }\\);/smg" ./Pods/react-native-select-contact/ios/RCTSelectContact/RCTSelectContact.m')
+    puts "Post-install script completed."
   end
 end

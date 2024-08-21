@@ -4,7 +4,7 @@ import PaciolanSDK
 struct ContentView: View {
     
     @State var showSdk = false
-    @State var controller = PaciolanSDKViewController(string: "{\"channelCode\":\"msdk-sa\",\"sdkKey\":\"test2\",\"organizationId\":390,\"distributorCode\":\"CICD80\",\"applicationId\":\"com.paciolan.sdk\",\"uiOptions\":{\"accentColor\":\"#cc0000\",\"logoImage\":\"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\"},\"route\":{\"name\":\"ticket-management\"},\"debug\":true,\"demo\":false}")!
+    @State var controller = PaciolanSDKViewController(string: "{\"channelCode\":\"msdk-sa\",\"sdkKey\":\"test2\",\"organizationId\":390,\"distributorCode\":\"CICD80\",\"applicationId\":\"com.paciolan.sdk\",\"uiOptions\":{\"accentColor\":\"#cc0000\",\"logoImage\":\"https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/1200px-Tulane_Green_Wave_logo.svg.png\"},\"route\":{\"name\":\"event-list\"},\"debug\":true,\"demo\":false}")!
     
     var body: some View {
         VStack(spacing: 0) {
