@@ -1,19 +1,17 @@
 # Resolve react_native_pods.rb with node to allow for hoisting
 require Pod::Executable.execute_command('node', ['-p',
-  'require.resolve(
-    "react-native/scripts/react_native_pods.rb",
-    {paths: [process.argv[1]]},
-  )', __dir__]).strip
+'require.resolve(
+  "react-native/scripts/react_native_pods.rb",
+  {paths: [require("path").join(process.argv[1], "..")]}
+)', __dir__]).strip
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
-flipper_config =  FlipperConfiguration.disabled 
 
 
-# MSDK DEPENDENCIES: Follow the pattern to add a new dependency, every time we have a new one.
+# # MSDK DEPENDENCIES: Follow the pattern to add a new dependency, every time we have a new one.
 node_modules_path = '../../node_modules'
 
-rncasyncstorage_path = File.join(node_modules_path, '@react-native-async-storage/async-storage/RNCAsyncStorage.podspec')
 rnmaskedview_path = File.join(node_modules_path, '@react-native-masked-view/masked-view/RNCMaskedView.podspec')
 rngesturehandler_path = File.join(node_modules_path, 'react-native-gesture-handler/RNGestureHandler.podspec')
 rnscreens_path = File.join(node_modules_path, 'react-native-screens/RNScreens.podspec')
@@ -34,7 +32,6 @@ target 'SamplePaciolanSwiftUI' do
   pod "PaciolanSDK", :path => "../"
 
   
-  pod 'RNCAsyncStorage', podspec: rncasyncstorage_path
   pod 'RNCMaskedView', podspec: rnmaskedview_path
   pod 'RNGestureHandler', podspec: rngesturehandler_path
   pod 'RNScreens', podspec: rnscreens_path
@@ -49,13 +46,11 @@ target 'SamplePaciolanSwiftUI' do
   pod 'RNFBMessaging', podspec: react_native_firebase_messaging
   pod 'react-native-wallet-manager', podspec: react_native_wallet_manager
 
-  config = use_native_modules!
-
+  # config = use_native_modules!
 
   use_react_native!(
-    :path => "../#{config[:reactNativePath]}",
+    :path => "../../node_modules/react-native",
     :hermes_enabled => false,
-    :flipper_configuration => flipper_config,
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
@@ -63,24 +58,8 @@ target 'SamplePaciolanSwiftUI' do
     # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
     react_native_post_install(
       installer,
-      "../#{config[:reactNativePath]}",
+      "../../node_modules/react-native",
       :mac_catalyst_enabled => false
     )
-    puts "Running post-install to fix react-native-select-contact"
-    system('perl -i -pe "BEGIN{undef $/;} s/UIViewController.*:nil\\];/dispatch_async\\(dispatch_get_main_queue\\(\\), ^{ UIViewController *picker = \\[\\[CNContactPickerViewController alloc\\] init\\]; \\(\\(CNContactPickerViewController *\\)picker\\).delegate = self; UIViewController *root = \\[UIApplication sharedApplication\\].keyWindow.rootViewController ? \\[UIApplication sharedApplication\\].keyWindow.rootViewController : \\[\\[\\[UIApplication sharedApplication\\] delegate\\] window\\].rootViewController; while\\(root.presentedViewController\\) { root = root.presentedViewController; } \\[root presentViewController:picker animated:YES completion:nil\\]; }\\);/smg" ./Pods/react-native-select-contact/ios/RCTSelectContact/RCTSelectContact.m')
-    puts "Post-install script completed."
-
-    installer.pods_project.targets.each do |target|
-      target.build_configurations.each do |config|
-        if ["Base64", "JWT"].include? target.name
-          config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
-        end
-
-        xcconfig_path = config.base_configuration_reference.real_path
-        xcconfig = File.read(xcconfig_path)
-        xcconfig_mod = xcconfig.gsub(/DT_TOOLCHAIN_DIR/, "TOOLCHAIN_DIR")
-        File.open(xcconfig_path, "w") { |file| file << xcconfig_mod }
-      end
-    end
   end
 end

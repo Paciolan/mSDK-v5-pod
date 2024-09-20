@@ -51,7 +51,7 @@ RCT_EXPORT_MODULE()
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge {
-    [CodePush overrideAppVersion: @"5.105"];
+    [CodePush overrideAppVersion: @"5.0"];
     return [CodePush bundleURLForResource:@"PaciolanSDK"
                                     withExtension:@"js"
                                      subdirectory:nil
