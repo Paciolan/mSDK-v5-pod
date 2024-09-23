@@ -23,9 +23,10 @@ Pod::Spec.new do |s|
   s.platform         = :ios, '13.4'
 
   # To run the example app locally, you need to change the yoga version to `1.14.0`
+  yoga_version = '1.14.1'
   
   extra_dependencies = [
-    'ReactCodegen'
+    'React-Codegen'
   ]
 
   core = [
@@ -48,13 +49,14 @@ Pod::Spec.new do |s|
     '../node_modules/react-native/ReactCommon/cxxreact/React-cxxreact.podspec',
     '../node_modules/react-native/ReactCommon/jsi/React-jsi.podspec',
     '../node_modules/react-native/ReactCommon/jsiexecutor/React-jsiexecutor.podspec',
+    '../node_modules/react-native/React/FBReactNativeSpec/FBReactNativeSpec.podspec',
     '../node_modules/react-native/Libraries/TypeSafety/RCTTypeSafety.podspec',
     '../node_modules/react-native/ReactCommon/ReactCommon.podspec',
     '../node_modules/react-native/ReactCommon/yoga/Yoga.podspec',
-    '../node_modules/react-native/Libraries/Vibration/React-RCTVibration.podspec'
   ]
-  
+
   core_dependencies_dependencies = [
+    '../node_modules/react-native/Libraries/RCTRequired/RCTRequired.podspec',
     '../node_modules/react-native/Libraries/FBLazyVector/FBLazyVector.podspec',
     '../node_modules/react-native/ReactCommon/jsinspector-modern/React-jsinspector.podspec',
     '../node_modules/react-native/ReactCommon/callinvoker/React-callinvoker.podspec',
@@ -78,6 +80,7 @@ Pod::Spec.new do |s|
 
   msdk_dependencies = [
     '../node_modules/react-native-encrypted-storage/react-native-encrypted-storage.podspec',
+    '../node_modules/@react-native-async-storage/async-storage/RNCAsyncStorage.podspec',
     '../node_modules/@react-native-masked-view/masked-view/RNCMaskedView.podspec',
     '../node_modules/react-native-gesture-handler/RNGestureHandler.podspec',
     '../node_modules/react-native-screens/RNScreens.podspec',
@@ -94,16 +97,15 @@ Pod::Spec.new do |s|
 
   podspecs = core + core_dependencies + core_dependencies_dependencies + third_party_dependencies + msdk_dependencies
 
-
   podspecs.each do |podspec_path|
     # p podspec_path
     spec = Pod::Specification.from_file podspec_path
-    # if spec.name === "Yoga"
-      # s.dependency spec.name, yoga_version
-    # else
+    if spec.name === "Yoga"
+      s.dependency spec.name, yoga_version
+    else
       s.dependency spec.name, "#{spec.version}"
-    # end
+    end
   end
 
-  s.dependency "Sentry", "8.36.0"
+  s.dependency "Sentry", "8.30.1"
 end
