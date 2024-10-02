@@ -80,7 +80,7 @@ PODS:
     - nanopb/encode (= 2.30910.0)
   - nanopb/decode (2.30910.0)
   - nanopb/encode (2.30910.0)
-  - PaciolanSDK (5.0.15):
+  - PaciolanSDK (5.0.16):
     - boost (= 1.83.0)
     - CodePush (= 8.2.1)
     - DoubleConversion (= 1.1.6)
@@ -1413,7 +1413,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: ea963c370a38a8069cc5f7ba4ca849a60b6d7d15
   JWT: ef71dfb03e1f842081e64dc42eef0e164f35d251
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
-  PaciolanSDK: 887846ae41b7377f4be1cb8e8b28da8c5d4c557f
+  PaciolanSDK: d28e014e20a2c3dadeea04ce99e1a97abae4bf32
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RCT-Folly: 7169b2b1c44399c76a47b5deaaba715eeeb476c0
   RCTRequired: ab7f915c15569f04a49669e573e6e319a53f9faa
