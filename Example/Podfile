@@ -67,7 +67,6 @@ target 'PaciolanSDK_Example' do
     :path => "../../node_modules/react-native",
     :hermes_enabled => false,
     :app_path => "#{Pod::Config.instance.installation_root}/..",
-    :fabric_enabled => true
   )
 
   post_install do |installer|
