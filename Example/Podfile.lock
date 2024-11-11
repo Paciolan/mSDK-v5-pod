@@ -1,7 +1,7 @@
 PODS:
   - Base64 (1.1.2)
   - boost (1.84.0)
-  - CodePush (8.3.1):
+  - CodePush (8.2.1):
     - Base64 (~> 1.1)
     - JWT (~> 3.0.0-beta.12)
     - React-Core
@@ -94,7 +94,7 @@ PODS:
   - nanopb/encode (2.30910.0)
   - PaciolanSDK (5.1.0):
     - boost (= 1.84.0)
-    - CodePush (= 8.3.1)
+    - CodePush (= 8.2.1)
     - DoubleConversion (= 1.1.6)
     - FBLazyVector (= 0.75.3)
     - fmt (= 9.1.0)
@@ -119,7 +119,7 @@ PODS:
     - react-native-safe-area-context (= 4.11.0)
     - react-native-select-contact (= 1.6.3)
     - react-native-wallet-manager (= 0.0.7)
-    - react-native-webview (= 13.12.2)
+    - react-native-webview (= 13.12.3)
     - React-NativeModulesApple (= 0.75.3)
     - React-perflogger (= 0.75.3)
     - React-RCTActionSheet (= 0.75.3)
@@ -143,8 +143,7 @@ PODS:
     - RNCPushNotificationIOS (= 1.11.0)
     - RNFBApp (= 19.3.0)
     - RNFBMessaging (= 19.3.0)
-    - RNGestureHandler (= 2.19.0)
-    - RNScreens (= 3.34.0)
+    - RNGestureHandler (= 2.15.0)
     - RNSentry (= 5.31.0)
     - Sentry (= 8.36.0)
     - Yoga (= 0.0.0)
@@ -1362,7 +1361,7 @@ PODS:
     - React-Core
   - react-native-wallet-manager (0.0.7):
     - React-Core
-  - react-native-webview (13.12.2):
+  - react-native-webview (13.12.3):
     - DoubleConversion
     - glog
     - RCT-Folly (= 2024.01.01.00)
@@ -1638,7 +1637,7 @@ PODS:
     - FirebaseCoreExtension
     - React-Core
     - RNFBApp
-  - RNGestureHandler (2.19.0):
+  - RNGestureHandler (2.15.0):
     - DoubleConversion
     - glog
     - RCT-Folly (= 2024.01.01.00)
@@ -1653,28 +1652,6 @@ PODS:
     - React-jsi
     - React-NativeModulesApple
     - React-RCTFabric
-    - React-rendererdebug
-    - React-utils
-    - ReactCodegen
-    - ReactCommon/turbomodule/bridging
-    - ReactCommon/turbomodule/core
-    - Yoga
-  - RNScreens (3.34.0):
-    - DoubleConversion
-    - glog
-    - RCT-Folly (= 2024.01.01.00)
-    - RCTRequired
-    - RCTTypeSafety
-    - React-Core
-    - React-debug
-    - React-Fabric
-    - React-featureflags
-    - React-graphics
-    - React-ImageManager
-    - React-jsi
-    - React-NativeModulesApple
-    - React-RCTFabric
-    - React-RCTImage
     - React-rendererdebug
     - React-utils
     - ReactCodegen
@@ -1748,7 +1725,6 @@ DEPENDENCIES:
   - React-idlecallbacksnativemodule (from `../../node_modules/react-native/ReactCommon/react/nativemodule/idlecallbacks`)
   - React-ImageManager (from `../../node_modules/react-native/ReactCommon/react/renderer/imagemanager/platform/ios`)
   - React-jsc (from `../../node_modules/react-native/ReactCommon/jsc`)
-  - React-jsc/Fabric (from `../../node_modules/react-native/ReactCommon/jsc`)
   - React-jserrorhandler (from `../../node_modules/react-native/ReactCommon/jserrorhandler`)
   - React-jsi (from `../../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../../node_modules/react-native/ReactCommon/jsiexecutor`)
@@ -1792,7 +1768,6 @@ DEPENDENCIES:
   - "RNFBApp (from `../../node_modules/@react-native-firebase/app/RNFBApp.podspec`)"
   - "RNFBMessaging (from `../../node_modules/@react-native-firebase/messaging/RNFBMessaging.podspec`)"
   - RNGestureHandler (from `../../node_modules/react-native-gesture-handler/RNGestureHandler.podspec`)
-  - RNScreens (from `../../node_modules/react-native-screens/RNScreens.podspec`)
   - "RNSentry (from `../../node_modules/@sentry/react-native/RNSentry.podspec`)"
   - Yoga (from `../../node_modules/react-native/ReactCommon/yoga`)
 
@@ -1957,8 +1932,6 @@ EXTERNAL SOURCES:
     :podspec: "../../node_modules/@react-native-firebase/messaging/RNFBMessaging.podspec"
   RNGestureHandler:
     :podspec: "../../node_modules/react-native-gesture-handler/RNGestureHandler.podspec"
-  RNScreens:
-    :podspec: "../../node_modules/react-native-screens/RNScreens.podspec"
   RNSentry:
     :podspec: "../../node_modules/@sentry/react-native/RNSentry.podspec"
   Yoga:
@@ -1967,7 +1940,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   boost: 4cb898d0bf20404aab1850c656dcea009429d6c1
-  CodePush: d892f13c5012e9e2cb36640f4929654b7be21fe5
+  CodePush: 84c9a5792cb3c8e311197d595610c803f0b01739
   DoubleConversion: 76ab83afb40bddeeee456813d9c04f67f78771b5
   FBLazyVector: 7b438dceb9f904bd85ca3c31d64cce32a035472b
   Firebase: 91fefd38712feb9186ea8996af6cbdef41473442
@@ -1982,7 +1955,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: ea963c370a38a8069cc5f7ba4ca849a60b6d7d15
   JWT: ef71dfb03e1f842081e64dc42eef0e164f35d251
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
-  PaciolanSDK: bdf9d560b84b885bf62ad340510d47f6782d14e8
+  PaciolanSDK: 38e0633e1d6f45f372d887f6eb9b4708f3e5a382
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RCT-Folly: 4464f4d875961fce86008d45f4ecf6cef6de0740
   RCTDeprecation: 4191f6e64b72d9743f6fe1a8a16e89e868f5e9e7
@@ -2017,7 +1990,7 @@ SPEC CHECKSUMS:
   react-native-safe-area-context: 851c62c48dce80ccaa5637b6aa5991a1bc36eca9
   react-native-select-contact: f88ccd9dbee6c4d1c32507291b431cf558a2ed42
   react-native-wallet-manager: e9c7876b25e75a91dfda005275670a358f3aa017
-  react-native-webview: 5850f8fdc5f06928286984ce7401c32be68442c2
+  react-native-webview: 29596927aad767cd15738f39ce9c93d68b75287b
   React-nativeconfig: 4a9543185905fe41014c06776bf126083795aed9
   React-NativeModulesApple: 651670a799672bd54469f2981d91493dda361ddf
   React-perflogger: 3bbb82f18e9ac29a1a6931568e99d6305ef4403b
@@ -2047,14 +2020,13 @@ SPEC CHECKSUMS:
   RNCPushNotificationIOS: 64218f3c776c03d7408284a819b2abfda1834bc8
   RNFBApp: dd35ba8340b89c36e42c4c137915c01d3c792143
   RNFBMessaging: c8d34d9ad44a3258a77e548bba6dc3561af7cf2d
-  RNGestureHandler: 4d41d91b91403421290bc8ee60aada60a03957d5
-  RNScreens: 5288a8dbeedb3c5051aa2d5658c1c553c050b80a
+  RNGestureHandler: 71e56d529939e118180ab41867bb860da241afaf
   RNSentry: 463a1db28ddcdf0da7939064740598909d4e73b5
   Sentry: f8374b5415bc38dfb5645941b3ae31230fbeae57
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
   Yoga: 4ef80d96a5534f0e01b3055f17d1e19a9fc61b63
 
-PODFILE CHECKSUM: 4308584ac770da9805418b379adebda45bc0e8e2
+PODFILE CHECKSUM: 20e461a9a3fa9d597a3a8b2b77640a96c839cd85
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.2

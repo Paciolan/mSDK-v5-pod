@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
   s.ios.resource_bundles = { 'PaciolanSDK' => ['PaciolanSDK/Assets/{PaciolanSDK.js,assets}'] }
   s.platform         = :ios, '13.4'
 
-  
   extra_dependencies = [
     'ReactCodegen'
   ]
@@ -70,7 +69,9 @@ Pod::Spec.new do |s|
     '../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler/React-runtimescheduler.podspec',
     '../node_modules/react-native/ReactCommon/jsc/React-jsc.podspec',
     '../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios/React-NativeModulesApple.podspec',
-    '../node_modules/react-native/ReactCommon/react/renderer/debug/React-rendererdebug.podspec'
+    '../node_modules/react-native/ReactCommon/react/renderer/debug/React-rendererdebug.podspec',
+    '../node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation/RCTDeprecation.podspec',
+    '../node_modules/react-native/React/React-RCTFabric.podspec',
   ]
 
   third_party_dependencies = [
@@ -85,7 +86,6 @@ Pod::Spec.new do |s|
     '../node_modules/react-native-encrypted-storage/react-native-encrypted-storage.podspec',
     '../node_modules/@react-native-masked-view/masked-view/RNCMaskedView.podspec',
     '../node_modules/react-native-gesture-handler/RNGestureHandler.podspec',
-    '../node_modules/react-native-screens/RNScreens.podspec',
     '../node_modules/react-native-safe-area-context/react-native-safe-area-context.podspec',
     '../node_modules/react-native-webview/react-native-webview.podspec',
     '../node_modules/react-native-code-push/CodePush.podspec',
@@ -99,15 +99,9 @@ Pod::Spec.new do |s|
 
   podspecs = core + core_dependencies + core_dependencies_dependencies + third_party_dependencies + msdk_dependencies
 
-
   podspecs.each do |podspec_path|
-    # p podspec_path
     spec = Pod::Specification.from_file podspec_path
-    # if spec.name === "Yoga"
-      # s.dependency spec.name, yoga_version
-    # else
       s.dependency spec.name, "#{spec.version}"
-    # end
   end
 
   s.dependency "Sentry", "8.36.0"
