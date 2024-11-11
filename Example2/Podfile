@@ -7,16 +7,13 @@ require Pod::Executable.execute_command('node', ['-p',
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
-flipper_config =  FlipperConfiguration.disabled 
 
 
 # MSDK DEPENDENCIES: Follow the pattern to add a new dependency, every time we have a new one.
 node_modules_path = '../../node_modules'
 
-rncasyncstorage_path = File.join(node_modules_path, '@react-native-async-storage/async-storage/RNCAsyncStorage.podspec')
 rnmaskedview_path = File.join(node_modules_path, '@react-native-masked-view/masked-view/RNCMaskedView.podspec')
 rngesturehandler_path = File.join(node_modules_path, 'react-native-gesture-handler/RNGestureHandler.podspec')
-rnscreens_path = File.join(node_modules_path, 'react-native-screens/RNScreens.podspec')
 react_native_encrypted_storage_path = File.join(node_modules_path, 'react-native-encrypted-storage/react-native-encrypted-storage.podspec')
 react_native_safe_area_context_path = File.join(node_modules_path, 'react-native-safe-area-context/react-native-safe-area-context.podspec')
 react_native_webview_path = File.join(node_modules_path, 'react-native-webview/react-native-webview.podspec')
@@ -30,22 +27,13 @@ react_native_wallet_manager = File.join(node_modules_path, 'react-native-wallet-
 
 
 
-linkage = ENV['USE_FRAMEWORKS']
-if linkage != nil
-  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
-  use_frameworks! :linkage => linkage.to_sym
-end
 
-
-
+use_frameworks!
 target 'SamplePaciolanSwiftUI' do
   pod "PaciolanSDK", :path => "../"
 
-  
-  pod 'RNCAsyncStorage', podspec: rncasyncstorage_path
   pod 'RNCMaskedView', podspec: rnmaskedview_path
   pod 'RNGestureHandler', podspec: rngesturehandler_path
-  pod 'RNScreens', podspec: rnscreens_path
   pod 'react-native-encrypted-storage', podspec: react_native_encrypted_storage_path
   pod 'react-native-safe-area-context', podspec: react_native_safe_area_context_path
   pod 'react-native-webview', podspec: react_native_webview_path

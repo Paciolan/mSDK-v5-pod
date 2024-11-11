@@ -14,7 +14,6 @@ node_modules_path = '../../node_modules'
 
 rnmaskedview_path = File.join(node_modules_path, '@react-native-masked-view/masked-view/RNCMaskedView.podspec')
 rngesturehandler_path = File.join(node_modules_path, 'react-native-gesture-handler/RNGestureHandler.podspec')
-rnscreens_path = File.join(node_modules_path, 'react-native-screens/RNScreens.podspec')
 react_native_encrypted_storage_path = File.join(node_modules_path, 'react-native-encrypted-storage/react-native-encrypted-storage.podspec')
 react_native_safe_area_context_path = File.join(node_modules_path, 'react-native-safe-area-context/react-native-safe-area-context.podspec')
 react_native_webview_path = File.join(node_modules_path, 'react-native-webview/react-native-webview.podspec')
@@ -34,14 +33,12 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-
 target 'PaciolanSDK_Example' do
   pod "PaciolanSDK", :path => "../"
 
   
   pod 'RNCMaskedView', podspec: rnmaskedview_path
   pod 'RNGestureHandler', podspec: rngesturehandler_path
-  pod 'RNScreens', podspec: rnscreens_path
   pod 'react-native-encrypted-storage', podspec: react_native_encrypted_storage_path
   pod 'react-native-safe-area-context', podspec: react_native_safe_area_context_path
   pod 'react-native-webview', podspec: react_native_webview_path
