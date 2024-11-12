@@ -143,7 +143,7 @@ PODS:
     - RNCPushNotificationIOS (= 1.11.0)
     - RNFBApp (= 19.3.0)
     - RNFBMessaging (= 19.3.0)
-    - RNGestureHandler (= 2.15.0)
+    - RNGestureHandler (= 2.20.2)
     - RNSentry (= 5.31.0)
     - Sentry (= 8.36.0)
     - Yoga (= 0.0.0)
@@ -1637,7 +1637,7 @@ PODS:
     - FirebaseCoreExtension
     - React-Core
     - RNFBApp
-  - RNGestureHandler (2.15.0):
+  - RNGestureHandler (2.20.2):
     - DoubleConversion
     - glog
     - RCT-Folly (= 2024.01.01.00)
@@ -1955,7 +1955,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: ea963c370a38a8069cc5f7ba4ca849a60b6d7d15
   JWT: ef71dfb03e1f842081e64dc42eef0e164f35d251
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
-  PaciolanSDK: 38e0633e1d6f45f372d887f6eb9b4708f3e5a382
+  PaciolanSDK: 14fe645c72e8077fdfc18cba493d0e2ef3b8755f
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RCT-Folly: 4464f4d875961fce86008d45f4ecf6cef6de0740
   RCTDeprecation: 4191f6e64b72d9743f6fe1a8a16e89e868f5e9e7
@@ -2020,7 +2020,7 @@ SPEC CHECKSUMS:
   RNCPushNotificationIOS: 64218f3c776c03d7408284a819b2abfda1834bc8
   RNFBApp: dd35ba8340b89c36e42c4c137915c01d3c792143
   RNFBMessaging: c8d34d9ad44a3258a77e548bba6dc3561af7cf2d
-  RNGestureHandler: 71e56d529939e118180ab41867bb860da241afaf
+  RNGestureHandler: 82f59e40580e0c2f8262552c149716511131b412
   RNSentry: 463a1db28ddcdf0da7939064740598909d4e73b5
   Sentry: f8374b5415bc38dfb5645941b3ae31230fbeae57
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
