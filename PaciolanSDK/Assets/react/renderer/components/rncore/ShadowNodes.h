@@ -16,29 +16,8 @@
 #include <react/renderer/components/view/ConcreteViewShadowNode.h>
 #include <jsi/jsi.h>
 
-namespace facebook::react {
-
-JSI_EXPORT extern const char ActivityIndicatorViewComponentName[];
-
-/*
- * `ShadowNode` for <ActivityIndicatorView> component.
- */
-using ActivityIndicatorViewShadowNode = ConcreteViewShadowNode<
-    ActivityIndicatorViewComponentName,
-    ActivityIndicatorViewProps,
-    ActivityIndicatorViewEventEmitter,
-    ActivityIndicatorViewState>;
-
-JSI_EXPORT extern const char AndroidDrawerLayoutComponentName[];
-
-/*
- * `ShadowNode` for <AndroidDrawerLayout> component.
- */
-using AndroidDrawerLayoutShadowNode = ConcreteViewShadowNode<
-    AndroidDrawerLayoutComponentName,
-    AndroidDrawerLayoutProps,
-    AndroidDrawerLayoutEventEmitter,
-    AndroidDrawerLayoutState>;
+namespace facebook {
+namespace react {
 
 JSI_EXPORT extern const char AndroidHorizontalScrollContentViewComponentName[];
 
@@ -62,17 +41,6 @@ using AndroidSwipeRefreshLayoutShadowNode = ConcreteViewShadowNode<
     AndroidSwipeRefreshLayoutEventEmitter,
     AndroidSwipeRefreshLayoutState>;
 
-JSI_EXPORT extern const char DebuggingOverlayComponentName[];
-
-/*
- * `ShadowNode` for <DebuggingOverlay> component.
- */
-using DebuggingOverlayShadowNode = ConcreteViewShadowNode<
-    DebuggingOverlayComponentName,
-    DebuggingOverlayProps,
-    DebuggingOverlayEventEmitter,
-    DebuggingOverlayState>;
-
 JSI_EXPORT extern const char PullToRefreshViewComponentName[];
 
 /*
@@ -84,16 +52,27 @@ using PullToRefreshViewShadowNode = ConcreteViewShadowNode<
     PullToRefreshViewEventEmitter,
     PullToRefreshViewState>;
 
-JSI_EXPORT extern const char SwitchComponentName[];
+JSI_EXPORT extern const char AndroidDrawerLayoutComponentName[];
 
 /*
- * `ShadowNode` for <Switch> component.
+ * `ShadowNode` for <AndroidDrawerLayout> component.
  */
-using SwitchShadowNode = ConcreteViewShadowNode<
-    SwitchComponentName,
-    SwitchProps,
-    SwitchEventEmitter,
-    SwitchState>;
+using AndroidDrawerLayoutShadowNode = ConcreteViewShadowNode<
+    AndroidDrawerLayoutComponentName,
+    AndroidDrawerLayoutProps,
+    AndroidDrawerLayoutEventEmitter,
+    AndroidDrawerLayoutState>;
+
+JSI_EXPORT extern const char ActivityIndicatorViewComponentName[];
+
+/*
+ * `ShadowNode` for <ActivityIndicatorView> component.
+ */
+using ActivityIndicatorViewShadowNode = ConcreteViewShadowNode<
+    ActivityIndicatorViewComponentName,
+    ActivityIndicatorViewProps,
+    ActivityIndicatorViewEventEmitter,
+    ActivityIndicatorViewState>;
 
 JSI_EXPORT extern const char UnimplementedNativeViewComponentName[];
 
@@ -106,4 +85,27 @@ using UnimplementedNativeViewShadowNode = ConcreteViewShadowNode<
     UnimplementedNativeViewEventEmitter,
     UnimplementedNativeViewState>;
 
-} // namespace facebook::react
+JSI_EXPORT extern const char SwitchComponentName[];
+
+/*
+ * `ShadowNode` for <Switch> component.
+ */
+using SwitchShadowNode = ConcreteViewShadowNode<
+    SwitchComponentName,
+    SwitchProps,
+    SwitchEventEmitter,
+    SwitchState>;
+
+JSI_EXPORT extern const char TraceUpdateOverlayComponentName[];
+
+/*
+ * `ShadowNode` for <TraceUpdateOverlay> component.
+ */
+using TraceUpdateOverlayShadowNode = ConcreteViewShadowNode<
+    TraceUpdateOverlayComponentName,
+    TraceUpdateOverlayProps,
+    TraceUpdateOverlayEventEmitter,
+    TraceUpdateOverlayState>;
+
+} // namespace react
+} // namespace facebook
