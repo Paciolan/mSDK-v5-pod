@@ -12,8 +12,48 @@
 #include <react/renderer/components/view/ViewEventEmitter.h>
 
 
-namespace facebook::react {
-class ActivityIndicatorViewEventEmitter : public ViewEventEmitter {
+namespace facebook {
+namespace react {
+class SafeAreaViewEventEmitter : public ViewEventEmitter {
+ public:
+  using ViewEventEmitter::ViewEventEmitter;
+
+  
+  
+};
+class AndroidHorizontalScrollContentViewEventEmitter : public ViewEventEmitter {
+ public:
+  using ViewEventEmitter::ViewEventEmitter;
+
+  
+  
+};
+class AndroidProgressBarEventEmitter : public ViewEventEmitter {
+ public:
+  using ViewEventEmitter::ViewEventEmitter;
+
+  
+  
+};
+class AndroidSwipeRefreshLayoutEventEmitter : public ViewEventEmitter {
+ public:
+  using ViewEventEmitter::ViewEventEmitter;
+
+  struct OnRefresh {
+      
+    };
+  void onRefresh(OnRefresh value) const;
+};
+class PullToRefreshViewEventEmitter : public ViewEventEmitter {
+ public:
+  using ViewEventEmitter::ViewEventEmitter;
+
+  struct OnRefresh {
+      
+    };
+  void onRefresh(OnRefresh value) const;
+};
+class InputAccessoryEventEmitter : public ViewEventEmitter {
  public:
   using ViewEventEmitter::ViewEventEmitter;
 
@@ -47,21 +87,29 @@ class AndroidDrawerLayoutEventEmitter : public ViewEventEmitter {
 
   void onDrawerClose(OnDrawerClose value) const;
 };
-class AndroidHorizontalScrollContentViewEventEmitter : public ViewEventEmitter {
+class ActivityIndicatorViewEventEmitter : public ViewEventEmitter {
  public:
   using ViewEventEmitter::ViewEventEmitter;
 
   
   
 };
-class AndroidSwipeRefreshLayoutEventEmitter : public ViewEventEmitter {
+class UnimplementedNativeViewEventEmitter : public ViewEventEmitter {
  public:
   using ViewEventEmitter::ViewEventEmitter;
 
-  struct OnRefresh {
-      
+  
+  
+};
+class SwitchEventEmitter : public ViewEventEmitter {
+ public:
+  using ViewEventEmitter::ViewEventEmitter;
+
+  struct OnChange {
+      bool value;
+    int target;
     };
-  void onRefresh(OnRefresh value) const;
+  void onChange(OnChange value) const;
 };
 class AndroidSwitchEventEmitter : public ViewEventEmitter {
  public:
@@ -73,30 +121,7 @@ class AndroidSwitchEventEmitter : public ViewEventEmitter {
     };
   void onChange(OnChange value) const;
 };
-class DebuggingOverlayEventEmitter : public ViewEventEmitter {
- public:
-  using ViewEventEmitter::ViewEventEmitter;
-
-  
-  
-};
-class AndroidProgressBarEventEmitter : public ViewEventEmitter {
- public:
-  using ViewEventEmitter::ViewEventEmitter;
-
-  
-  
-};
-class PullToRefreshViewEventEmitter : public ViewEventEmitter {
- public:
-  using ViewEventEmitter::ViewEventEmitter;
-
-  struct OnRefresh {
-      
-    };
-  void onRefresh(OnRefresh value) const;
-};
-class InputAccessoryEventEmitter : public ViewEventEmitter {
+class TraceUpdateOverlayEventEmitter : public ViewEventEmitter {
  public:
   using ViewEventEmitter::ViewEventEmitter;
 
@@ -142,28 +167,5 @@ class ModalHostViewEventEmitter : public ViewEventEmitter {
 
   void onOrientationChange(OnOrientationChange value) const;
 };
-class SafeAreaViewEventEmitter : public ViewEventEmitter {
- public:
-  using ViewEventEmitter::ViewEventEmitter;
-
-  
-  
-};
-class SwitchEventEmitter : public ViewEventEmitter {
- public:
-  using ViewEventEmitter::ViewEventEmitter;
-
-  struct OnChange {
-      bool value;
-    int target;
-    };
-  void onChange(OnChange value) const;
-};
-class UnimplementedNativeViewEventEmitter : public ViewEventEmitter {
- public:
-  using ViewEventEmitter::ViewEventEmitter;
-
-  
-  
-};
-} // namespace facebook::react
+} // namespace react
+} // namespace facebook

@@ -28,7 +28,6 @@
 
 @implementation PaciolanSDKViewController
 @synthesize config;
-static NSString *INSTALLED_VERSION = @"5.1.0";
 static TokenCallback tokenCallback;
 
 RCT_EXPORT_MODULE()
@@ -41,14 +40,7 @@ RCT_EXPORT_MODULE()
 - (void)viewDidLoad {
    [super viewDidLoad];
     RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:@{}];
-  NSLog(@"installed versioon: %@", INSTALLED_VERSION);
-    RCTRootView *rootView = [
-        [RCTRootView alloc] 
-        initWithBridge:bridge 
-        moduleName:@"PaciolanSDK" 
-        initialProperties:@{@"configString":config, @"installedVersion": INSTALLED_VERSION}
-    ];
-
+    RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge moduleName:@"PaciolanSDK" initialProperties:@{@"configString":config}];
     self.view = rootView;
 
     // Sentry config initialization.
@@ -59,7 +51,7 @@ RCT_EXPORT_MODULE()
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge {
-    [CodePush overrideAppVersion: @"5.1"];
+    [CodePush overrideAppVersion: @"5.0"];
     return [CodePush bundleURLForResource:@"PaciolanSDK"
                                     withExtension:@"js"
                                      subdirectory:nil
