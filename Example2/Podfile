@@ -7,13 +7,16 @@ require Pod::Executable.execute_command('node', ['-p',
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
+flipper_config =  FlipperConfiguration.disabled 
 
 
 # MSDK DEPENDENCIES: Follow the pattern to add a new dependency, every time we have a new one.
 node_modules_path = '../../node_modules'
 
+rncasyncstorage_path = File.join(node_modules_path, '@react-native-async-storage/async-storage/RNCAsyncStorage.podspec')
 rnmaskedview_path = File.join(node_modules_path, '@react-native-masked-view/masked-view/RNCMaskedView.podspec')
 rngesturehandler_path = File.join(node_modules_path, 'react-native-gesture-handler/RNGestureHandler.podspec')
+rnscreens_path = File.join(node_modules_path, 'react-native-screens/RNScreens.podspec')
 react_native_encrypted_storage_path = File.join(node_modules_path, 'react-native-encrypted-storage/react-native-encrypted-storage.podspec')
 react_native_safe_area_context_path = File.join(node_modules_path, 'react-native-safe-area-context/react-native-safe-area-context.podspec')
 react_native_webview_path = File.join(node_modules_path, 'react-native-webview/react-native-webview.podspec')
@@ -26,14 +29,15 @@ react_native_firebase_messaging = File.join(node_modules_path, '@react-native-fi
 react_native_wallet_manager = File.join(node_modules_path, 'react-native-wallet-manager/react-native-wallet-manager.podspec')
 
 
-
-
 use_frameworks!
 target 'SamplePaciolanSwiftUI' do
   pod "PaciolanSDK", :path => "../"
 
+  
+  pod 'RNCAsyncStorage', podspec: rncasyncstorage_path
   pod 'RNCMaskedView', podspec: rnmaskedview_path
   pod 'RNGestureHandler', podspec: rngesturehandler_path
+  pod 'RNScreens', podspec: rnscreens_path
   pod 'react-native-encrypted-storage', podspec: react_native_encrypted_storage_path
   pod 'react-native-safe-area-context', podspec: react_native_safe_area_context_path
   pod 'react-native-webview', podspec: react_native_webview_path
@@ -44,25 +48,22 @@ target 'SamplePaciolanSwiftUI' do
   pod 'RNFBApp', podspec: react_native_firebase_app
   pod 'RNFBMessaging', podspec: react_native_firebase_messaging
   pod 'react-native-wallet-manager', podspec: react_native_wallet_manager
-  pod 'GoogleUtilities', :modular_headers => true
-  pod 'FirebaseCore', :modular_headers => true
-  pod 'nanopb', :modular_headers => true
-  pod 'FirebaseInstallations', :modular_headers => true
-  pod 'GoogleDataTransport', :modular_headers => true
-  pod 'FirebaseCoreExtension', :modular_headers => true
 
-  
+  config = use_native_modules!
+
+
   use_react_native!(
-    :path => "../../node_modules/react-native",
+    :path => "../#{config[:reactNativePath]}",
     :hermes_enabled => false,
-    :app_path => "#{Pod::Config.instance.installation_root}/..",
+    :flipper_configuration => flipper_config,
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
   post_install do |installer|
     # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
     react_native_post_install(
       installer,
-      "../../node_modules/react-native",
+      "../#{config[:reactNativePath]}",
       :mac_catalyst_enabled => false
     )
     puts "Running post-install to fix react-native-select-contact"

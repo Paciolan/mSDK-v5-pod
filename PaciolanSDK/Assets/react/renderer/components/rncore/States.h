@@ -10,33 +10,12 @@
 
 #ifdef ANDROID
 #include <folly/dynamic.h>
+#include <react/renderer/mapbuffer/MapBuffer.h>
+#include <react/renderer/mapbuffer/MapBufferBuilder.h>
 #endif
 
-namespace facebook::react {
-
-class ActivityIndicatorViewState {
-public:
-  ActivityIndicatorViewState() = default;
-
-#ifdef ANDROID
-  ActivityIndicatorViewState(ActivityIndicatorViewState const &previousState, folly::dynamic data){};
-  folly::dynamic getDynamic() const {
-    return {};
-  };
-#endif
-};
-
-class AndroidDrawerLayoutState {
-public:
-  AndroidDrawerLayoutState() = default;
-
-#ifdef ANDROID
-  AndroidDrawerLayoutState(AndroidDrawerLayoutState const &previousState, folly::dynamic data){};
-  folly::dynamic getDynamic() const {
-    return {};
-  };
-#endif
-};
+namespace facebook {
+namespace react {
 
 class AndroidHorizontalScrollContentViewState {
 public:
@@ -46,6 +25,9 @@ public:
   AndroidHorizontalScrollContentViewState(AndroidHorizontalScrollContentViewState const &previousState, folly::dynamic data){};
   folly::dynamic getDynamic() const {
     return {};
+  };
+  MapBuffer getMapBuffer() const {
+    return MapBufferBuilder::EMPTY();
   };
 #endif
 };
@@ -59,17 +41,8 @@ public:
   folly::dynamic getDynamic() const {
     return {};
   };
-#endif
-};
-
-class DebuggingOverlayState {
-public:
-  DebuggingOverlayState() = default;
-
-#ifdef ANDROID
-  DebuggingOverlayState(DebuggingOverlayState const &previousState, folly::dynamic data){};
-  folly::dynamic getDynamic() const {
-    return {};
+  MapBuffer getMapBuffer() const {
+    return MapBufferBuilder::EMPTY();
   };
 #endif
 };
@@ -83,17 +56,38 @@ public:
   folly::dynamic getDynamic() const {
     return {};
   };
+  MapBuffer getMapBuffer() const {
+    return MapBufferBuilder::EMPTY();
+  };
 #endif
 };
 
-class SwitchState {
+class AndroidDrawerLayoutState {
 public:
-  SwitchState() = default;
+  AndroidDrawerLayoutState() = default;
 
 #ifdef ANDROID
-  SwitchState(SwitchState const &previousState, folly::dynamic data){};
+  AndroidDrawerLayoutState(AndroidDrawerLayoutState const &previousState, folly::dynamic data){};
   folly::dynamic getDynamic() const {
     return {};
+  };
+  MapBuffer getMapBuffer() const {
+    return MapBufferBuilder::EMPTY();
+  };
+#endif
+};
+
+class ActivityIndicatorViewState {
+public:
+  ActivityIndicatorViewState() = default;
+
+#ifdef ANDROID
+  ActivityIndicatorViewState(ActivityIndicatorViewState const &previousState, folly::dynamic data){};
+  folly::dynamic getDynamic() const {
+    return {};
+  };
+  MapBuffer getMapBuffer() const {
+    return MapBufferBuilder::EMPTY();
   };
 #endif
 };
@@ -107,7 +101,41 @@ public:
   folly::dynamic getDynamic() const {
     return {};
   };
+  MapBuffer getMapBuffer() const {
+    return MapBufferBuilder::EMPTY();
+  };
 #endif
 };
 
-} // namespace facebook::react
+class SwitchState {
+public:
+  SwitchState() = default;
+
+#ifdef ANDROID
+  SwitchState(SwitchState const &previousState, folly::dynamic data){};
+  folly::dynamic getDynamic() const {
+    return {};
+  };
+  MapBuffer getMapBuffer() const {
+    return MapBufferBuilder::EMPTY();
+  };
+#endif
+};
+
+class TraceUpdateOverlayState {
+public:
+  TraceUpdateOverlayState() = default;
+
+#ifdef ANDROID
+  TraceUpdateOverlayState(TraceUpdateOverlayState const &previousState, folly::dynamic data){};
+  folly::dynamic getDynamic() const {
+    return {};
+  };
+  MapBuffer getMapBuffer() const {
+    return MapBufferBuilder::EMPTY();
+  };
+#endif
+};
+
+} // namespace react
+} // namespace facebook
