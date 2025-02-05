@@ -36,8 +36,3 @@ Carthage/Build
 Pods/
 Example/Pods
 Example/.xcode.env.local
-
-
-Pods/
-Example2/Pods
-Example2/.xcode.env.local
