@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.source_files     = 'PaciolanSDK/Classes/**/*.{h,m,swift}'
   s.resources        = 'PaciolanSDK/Assets/{PaciolanSDK.js,assets}'
   s.ios.resource_bundles = { 'PaciolanSDK' => ['PaciolanSDK/Assets/{PaciolanSDK.js,assets}'] }
-  s.platform         = :ios, '15.5'
+  s.platform         = :ios, '13.4'
 
   extra_dependencies = [
     'ReactCodegen'
