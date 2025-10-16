@@ -1,6 +1,6 @@
 {
   "name": "PaciolanSDK",
-  "version": "5.105.250704",
+  "version": "5.105.251016",
   "summary": "Pod Component for Paciolan Mobile SDK",
   "description": "This pod allows us to install the Paciolan react native SDK ViewController into an iOS app.",
   "homepage": "https://github.com/Paciolan/mSDK-v5-pod",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/Paciolan/mSDK-v5-pod.git",
-    "tag": "5.105.250704"
+    "tag": "5.105.251016"
   },
   "source_files": "PaciolanSDK/Classes/**/*.{h,m,swift}",
   "resources": "PaciolanSDK/Assets/{PaciolanSDK.js,assets}",
@@ -172,7 +172,7 @@
       "9.0.1"
     ],
     "RNSentry": [
-      "5.31.0"
+      "6.15.1"
     ],
     "RNCPushNotificationIOS": [
       "1.11.0"
@@ -190,7 +190,7 @@
       "0.0.7"
     ],
     "Sentry": [
-      "8.36.0"
+      "8.52.1"
     ]
   }
 }
