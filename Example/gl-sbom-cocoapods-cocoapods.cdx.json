@@ -1,0 +1,1109 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:3923b42c-26c2-4858-ac89-53ef44cf7176",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-10-16T00:33:02Z",
+    "tools": [
+      {
+        "vendor": "GitLab",
+        "name": "Gemnasium",
+        "version": "6.2.3"
+      }
+    ],
+    "authors": [
+      {
+        "name": "GitLab",
+        "email": "support@gitlab.com"
+      }
+    ],
+    "properties": [
+      {
+        "name": "gitlab:dependency_scanning:input_file:path",
+        "value": "sdk-pod/Example/Podfile.lock"
+      },
+      {
+        "name": "gitlab:dependency_scanning:package_manager:name",
+        "value": "cocoapods"
+      },
+      {
+        "name": "gitlab:meta:schema_version",
+        "value": "1"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Base64",
+      "version": "1.1.2",
+      "purl": "pkg:cocoapods/Base64@1.1.2",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/Base64@1.1.2"
+    },
+    {
+      "name": "CodePush",
+      "version": "9.0.1",
+      "purl": "pkg:cocoapods/CodePush@9.0.1",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/CodePush@9.0.1"
+    },
+    {
+      "name": "DoubleConversion",
+      "version": "1.1.6",
+      "purl": "pkg:cocoapods/DoubleConversion@1.1.6",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/DoubleConversion@1.1.6"
+    },
+    {
+      "name": "FBLazyVector",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/FBLazyVector@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/FBLazyVector@0.75.3"
+    },
+    {
+      "name": "Firebase/CoreOnly",
+      "version": "10.24.0",
+      "purl": "pkg:cocoapods/Firebase/CoreOnly@10.24.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/Firebase/CoreOnly@10.24.0"
+    },
+    {
+      "name": "Firebase/Messaging",
+      "version": "10.24.0",
+      "purl": "pkg:cocoapods/Firebase/Messaging@10.24.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/Firebase/Messaging@10.24.0"
+    },
+    {
+      "name": "FirebaseCore",
+      "version": "10.24.0",
+      "purl": "pkg:cocoapods/FirebaseCore@10.24.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/FirebaseCore@10.24.0"
+    },
+    {
+      "name": "FirebaseCoreExtension",
+      "version": "10.29.0",
+      "purl": "pkg:cocoapods/FirebaseCoreExtension@10.29.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/FirebaseCoreExtension@10.29.0"
+    },
+    {
+      "name": "FirebaseCoreInternal",
+      "version": "10.29.0",
+      "purl": "pkg:cocoapods/FirebaseCoreInternal@10.29.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/FirebaseCoreInternal@10.29.0"
+    },
+    {
+      "name": "FirebaseInstallations",
+      "version": "10.29.0",
+      "purl": "pkg:cocoapods/FirebaseInstallations@10.29.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/FirebaseInstallations@10.29.0"
+    },
+    {
+      "name": "FirebaseMessaging",
+      "version": "10.24.0",
+      "purl": "pkg:cocoapods/FirebaseMessaging@10.24.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/FirebaseMessaging@10.24.0"
+    },
+    {
+      "name": "GoogleDataTransport",
+      "version": "9.4.1",
+      "purl": "pkg:cocoapods/GoogleDataTransport@9.4.1",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/GoogleDataTransport@9.4.1"
+    },
+    {
+      "name": "GoogleUtilities",
+      "version": "7.13.3",
+      "purl": "pkg:cocoapods/GoogleUtilities@7.13.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/GoogleUtilities@7.13.3"
+    },
+    {
+      "name": "GoogleUtilities/AppDelegateSwizzler",
+      "version": "7.13.3",
+      "purl": "pkg:cocoapods/GoogleUtilities/AppDelegateSwizzler@7.13.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/GoogleUtilities/AppDelegateSwizzler@7.13.3"
+    },
+    {
+      "name": "GoogleUtilities/Environment",
+      "version": "7.13.3",
+      "purl": "pkg:cocoapods/GoogleUtilities/Environment@7.13.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/GoogleUtilities/Environment@7.13.3"
+    },
+    {
+      "name": "GoogleUtilities/ISASwizzler",
+      "version": "7.13.3",
+      "purl": "pkg:cocoapods/GoogleUtilities/ISASwizzler@7.13.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/GoogleUtilities/ISASwizzler@7.13.3"
+    },
+    {
+      "name": "GoogleUtilities/Logger",
+      "version": "7.13.3",
+      "purl": "pkg:cocoapods/GoogleUtilities/Logger@7.13.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/GoogleUtilities/Logger@7.13.3"
+    },
+    {
+      "name": "GoogleUtilities/MethodSwizzler",
+      "version": "7.13.3",
+      "purl": "pkg:cocoapods/GoogleUtilities/MethodSwizzler@7.13.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/GoogleUtilities/MethodSwizzler@7.13.3"
+    },
+    {
+      "name": "GoogleUtilities/Network",
+      "version": "7.13.3",
+      "purl": "pkg:cocoapods/GoogleUtilities/Network@7.13.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/GoogleUtilities/Network@7.13.3"
+    },
+    {
+      "name": "GoogleUtilities/Privacy",
+      "version": "7.13.3",
+      "purl": "pkg:cocoapods/GoogleUtilities/Privacy@7.13.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/GoogleUtilities/Privacy@7.13.3"
+    },
+    {
+      "name": "GoogleUtilities/Reachability",
+      "version": "7.13.3",
+      "purl": "pkg:cocoapods/GoogleUtilities/Reachability@7.13.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/GoogleUtilities/Reachability@7.13.3"
+    },
+    {
+      "name": "GoogleUtilities/SwizzlerTestHelpers",
+      "version": "7.13.3",
+      "purl": "pkg:cocoapods/GoogleUtilities/SwizzlerTestHelpers@7.13.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/GoogleUtilities/SwizzlerTestHelpers@7.13.3"
+    },
+    {
+      "name": "GoogleUtilities/UserDefaults",
+      "version": "7.13.3",
+      "purl": "pkg:cocoapods/GoogleUtilities/UserDefaults@7.13.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/GoogleUtilities/UserDefaults@7.13.3"
+    },
+    {
+      "name": "PaciolanSDK",
+      "version": "5.2.1",
+      "purl": "pkg:cocoapods/PaciolanSDK@5.2.1",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/PaciolanSDK@5.2.1"
+    },
+    {
+      "name": "PromisesObjC",
+      "version": "2.4.0",
+      "purl": "pkg:cocoapods/PromisesObjC@2.4.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/PromisesObjC@2.4.0"
+    },
+    {
+      "name": "RCT-Folly",
+      "version": "2024.01.01.00",
+      "purl": "pkg:cocoapods/RCT-Folly@2024.01.01.00",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/RCT-Folly@2024.01.01.00"
+    },
+    {
+      "name": "RCT-Folly/Default",
+      "version": "2024.01.01.00",
+      "purl": "pkg:cocoapods/RCT-Folly/Default@2024.01.01.00",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/RCT-Folly/Default@2024.01.01.00"
+    },
+    {
+      "name": "RCT-Folly/Fabric",
+      "version": "2024.01.01.00",
+      "purl": "pkg:cocoapods/RCT-Folly/Fabric@2024.01.01.00",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/RCT-Folly/Fabric@2024.01.01.00"
+    },
+    {
+      "name": "RCTDeprecation",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/RCTDeprecation@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/RCTDeprecation@0.75.3"
+    },
+    {
+      "name": "RCTRequired",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/RCTRequired@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/RCTRequired@0.75.3"
+    },
+    {
+      "name": "RCTTypeSafety",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/RCTTypeSafety@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/RCTTypeSafety@0.75.3"
+    },
+    {
+      "name": "RNCMaskedView",
+      "version": "0.3.1",
+      "purl": "pkg:cocoapods/RNCMaskedView@0.3.1",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/RNCMaskedView@0.3.1"
+    },
+    {
+      "name": "RNCPushNotificationIOS",
+      "version": "1.11.0",
+      "purl": "pkg:cocoapods/RNCPushNotificationIOS@1.11.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/RNCPushNotificationIOS@1.11.0"
+    },
+    {
+      "name": "RNFBApp",
+      "version": "19.3.0",
+      "purl": "pkg:cocoapods/RNFBApp@19.3.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/RNFBApp@19.3.0"
+    },
+    {
+      "name": "RNFBMessaging",
+      "version": "19.3.0",
+      "purl": "pkg:cocoapods/RNFBMessaging@19.3.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/RNFBMessaging@19.3.0"
+    },
+    {
+      "name": "RNGestureHandler",
+      "version": "2.21.2",
+      "purl": "pkg:cocoapods/RNGestureHandler@2.21.2",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/RNGestureHandler@2.21.2"
+    },
+    {
+      "name": "RNSentry",
+      "version": "6.15.1",
+      "purl": "pkg:cocoapods/RNSentry@6.15.1",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/RNSentry@6.15.1"
+    },
+    {
+      "name": "React",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React@0.75.3"
+    },
+    {
+      "name": "React-Core",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Core@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Core@0.75.3"
+    },
+    {
+      "name": "React-Core/CoreModulesHeaders",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Core/CoreModulesHeaders@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Core/CoreModulesHeaders@0.75.3"
+    },
+    {
+      "name": "React-Core/Default",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Core/Default@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Core/Default@0.75.3"
+    },
+    {
+      "name": "React-Core/DevSupport",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Core/DevSupport@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Core/DevSupport@0.75.3"
+    },
+    {
+      "name": "React-Core/RCTActionSheetHeaders",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Core/RCTActionSheetHeaders@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Core/RCTActionSheetHeaders@0.75.3"
+    },
+    {
+      "name": "React-Core/RCTAnimationHeaders",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Core/RCTAnimationHeaders@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Core/RCTAnimationHeaders@0.75.3"
+    },
+    {
+      "name": "React-Core/RCTBlobHeaders",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Core/RCTBlobHeaders@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Core/RCTBlobHeaders@0.75.3"
+    },
+    {
+      "name": "React-Core/RCTImageHeaders",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Core/RCTImageHeaders@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Core/RCTImageHeaders@0.75.3"
+    },
+    {
+      "name": "React-Core/RCTLinkingHeaders",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Core/RCTLinkingHeaders@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Core/RCTLinkingHeaders@0.75.3"
+    },
+    {
+      "name": "React-Core/RCTNetworkHeaders",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Core/RCTNetworkHeaders@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Core/RCTNetworkHeaders@0.75.3"
+    },
+    {
+      "name": "React-Core/RCTSettingsHeaders",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Core/RCTSettingsHeaders@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Core/RCTSettingsHeaders@0.75.3"
+    },
+    {
+      "name": "React-Core/RCTTextHeaders",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Core/RCTTextHeaders@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Core/RCTTextHeaders@0.75.3"
+    },
+    {
+      "name": "React-Core/RCTVibrationHeaders",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Core/RCTVibrationHeaders@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Core/RCTVibrationHeaders@0.75.3"
+    },
+    {
+      "name": "React-Core/RCTWebSocket",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Core/RCTWebSocket@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Core/RCTWebSocket@0.75.3"
+    },
+    {
+      "name": "React-CoreModules",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-CoreModules@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-CoreModules@0.75.3"
+    },
+    {
+      "name": "React-Fabric",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric@0.75.3"
+    },
+    {
+      "name": "React-Fabric/animations",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/animations@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/animations@0.75.3"
+    },
+    {
+      "name": "React-Fabric/attributedstring",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/attributedstring@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/attributedstring@0.75.3"
+    },
+    {
+      "name": "React-Fabric/componentregistry",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/componentregistry@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/componentregistry@0.75.3"
+    },
+    {
+      "name": "React-Fabric/componentregistrynative",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/componentregistrynative@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/componentregistrynative@0.75.3"
+    },
+    {
+      "name": "React-Fabric/components",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/components@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/components@0.75.3"
+    },
+    {
+      "name": "React-Fabric/components/legacyviewmanagerinterop",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/components/legacyviewmanagerinterop@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/components/legacyviewmanagerinterop@0.75.3"
+    },
+    {
+      "name": "React-Fabric/components/root",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/components/root@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/components/root@0.75.3"
+    },
+    {
+      "name": "React-Fabric/components/view",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/components/view@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/components/view@0.75.3"
+    },
+    {
+      "name": "React-Fabric/core",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/core@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/core@0.75.3"
+    },
+    {
+      "name": "React-Fabric/dom",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/dom@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/dom@0.75.3"
+    },
+    {
+      "name": "React-Fabric/imagemanager",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/imagemanager@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/imagemanager@0.75.3"
+    },
+    {
+      "name": "React-Fabric/leakchecker",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/leakchecker@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/leakchecker@0.75.3"
+    },
+    {
+      "name": "React-Fabric/mounting",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/mounting@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/mounting@0.75.3"
+    },
+    {
+      "name": "React-Fabric/observers",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/observers@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/observers@0.75.3"
+    },
+    {
+      "name": "React-Fabric/observers/events",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/observers/events@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/observers/events@0.75.3"
+    },
+    {
+      "name": "React-Fabric/scheduler",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/scheduler@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/scheduler@0.75.3"
+    },
+    {
+      "name": "React-Fabric/telemetry",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/telemetry@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/telemetry@0.75.3"
+    },
+    {
+      "name": "React-Fabric/templateprocessor",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/templateprocessor@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/templateprocessor@0.75.3"
+    },
+    {
+      "name": "React-Fabric/uimanager",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/uimanager@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/uimanager@0.75.3"
+    },
+    {
+      "name": "React-Fabric/uimanager/consistency",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Fabric/uimanager/consistency@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Fabric/uimanager/consistency@0.75.3"
+    },
+    {
+      "name": "React-FabricComponents",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-FabricComponents@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-FabricComponents@0.75.3"
+    },
+    {
+      "name": "React-FabricComponents/components",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-FabricComponents/components@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-FabricComponents/components@0.75.3"
+    },
+    {
+      "name": "React-FabricComponents/components/inputaccessory",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-FabricComponents/components/inputaccessory@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-FabricComponents/components/inputaccessory@0.75.3"
+    },
+    {
+      "name": "React-FabricComponents/components/iostextinput",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-FabricComponents/components/iostextinput@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-FabricComponents/components/iostextinput@0.75.3"
+    },
+    {
+      "name": "React-FabricComponents/components/modal",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-FabricComponents/components/modal@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-FabricComponents/components/modal@0.75.3"
+    },
+    {
+      "name": "React-FabricComponents/components/rncore",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-FabricComponents/components/rncore@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-FabricComponents/components/rncore@0.75.3"
+    },
+    {
+      "name": "React-FabricComponents/components/safeareaview",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-FabricComponents/components/safeareaview@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-FabricComponents/components/safeareaview@0.75.3"
+    },
+    {
+      "name": "React-FabricComponents/components/scrollview",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-FabricComponents/components/scrollview@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-FabricComponents/components/scrollview@0.75.3"
+    },
+    {
+      "name": "React-FabricComponents/components/text",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-FabricComponents/components/text@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-FabricComponents/components/text@0.75.3"
+    },
+    {
+      "name": "React-FabricComponents/components/textinput",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-FabricComponents/components/textinput@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-FabricComponents/components/textinput@0.75.3"
+    },
+    {
+      "name": "React-FabricComponents/components/unimplementedview",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-FabricComponents/components/unimplementedview@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-FabricComponents/components/unimplementedview@0.75.3"
+    },
+    {
+      "name": "React-FabricComponents/textlayoutmanager",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-FabricComponents/textlayoutmanager@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-FabricComponents/textlayoutmanager@0.75.3"
+    },
+    {
+      "name": "React-FabricImage",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-FabricImage@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-FabricImage@0.75.3"
+    },
+    {
+      "name": "React-ImageManager",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-ImageManager@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-ImageManager@0.75.3"
+    },
+    {
+      "name": "React-Mapbuffer",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-Mapbuffer@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-Mapbuffer@0.75.3"
+    },
+    {
+      "name": "React-NativeModulesApple",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-NativeModulesApple@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-NativeModulesApple@0.75.3"
+    },
+    {
+      "name": "React-RCTActionSheet",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-RCTActionSheet@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-RCTActionSheet@0.75.3"
+    },
+    {
+      "name": "React-RCTAnimation",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-RCTAnimation@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-RCTAnimation@0.75.3"
+    },
+    {
+      "name": "React-RCTAppDelegate",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-RCTAppDelegate@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-RCTAppDelegate@0.75.3"
+    },
+    {
+      "name": "React-RCTBlob",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-RCTBlob@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-RCTBlob@0.75.3"
+    },
+    {
+      "name": "React-RCTFabric",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-RCTFabric@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-RCTFabric@0.75.3"
+    },
+    {
+      "name": "React-RCTImage",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-RCTImage@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-RCTImage@0.75.3"
+    },
+    {
+      "name": "React-RCTLinking",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-RCTLinking@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-RCTLinking@0.75.3"
+    },
+    {
+      "name": "React-RCTNetwork",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-RCTNetwork@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-RCTNetwork@0.75.3"
+    },
+    {
+      "name": "React-RCTSettings",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-RCTSettings@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-RCTSettings@0.75.3"
+    },
+    {
+      "name": "React-RCTText",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-RCTText@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-RCTText@0.75.3"
+    },
+    {
+      "name": "React-RCTVibration",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-RCTVibration@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-RCTVibration@0.75.3"
+    },
+    {
+      "name": "React-RuntimeApple",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-RuntimeApple@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-RuntimeApple@0.75.3"
+    },
+    {
+      "name": "React-RuntimeCore",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-RuntimeCore@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-RuntimeCore@0.75.3"
+    },
+    {
+      "name": "React-callinvoker",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-callinvoker@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-callinvoker@0.75.3"
+    },
+    {
+      "name": "React-cxxreact",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-cxxreact@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-cxxreact@0.75.3"
+    },
+    {
+      "name": "React-debug",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-debug@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-debug@0.75.3"
+    },
+    {
+      "name": "React-defaultsnativemodule",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-defaultsnativemodule@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-defaultsnativemodule@0.75.3"
+    },
+    {
+      "name": "React-domnativemodule",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-domnativemodule@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-domnativemodule@0.75.3"
+    },
+    {
+      "name": "React-featureflags",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-featureflags@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-featureflags@0.75.3"
+    },
+    {
+      "name": "React-featureflagsnativemodule",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-featureflagsnativemodule@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-featureflagsnativemodule@0.75.3"
+    },
+    {
+      "name": "React-graphics",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-graphics@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-graphics@0.75.3"
+    },
+    {
+      "name": "React-idlecallbacksnativemodule",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-idlecallbacksnativemodule@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-idlecallbacksnativemodule@0.75.3"
+    },
+    {
+      "name": "React-jsc",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-jsc@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-jsc@0.75.3"
+    },
+    {
+      "name": "React-jsc/Fabric",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-jsc/Fabric@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-jsc/Fabric@0.75.3"
+    },
+    {
+      "name": "React-jserrorhandler",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-jserrorhandler@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-jserrorhandler@0.75.3"
+    },
+    {
+      "name": "React-jsi",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-jsi@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-jsi@0.75.3"
+    },
+    {
+      "name": "React-jsiexecutor",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-jsiexecutor@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-jsiexecutor@0.75.3"
+    },
+    {
+      "name": "React-jsinspector",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-jsinspector@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-jsinspector@0.75.3"
+    },
+    {
+      "name": "React-jsitracing",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-jsitracing@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-jsitracing@0.75.3"
+    },
+    {
+      "name": "React-logger",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-logger@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-logger@0.75.3"
+    },
+    {
+      "name": "React-microtasksnativemodule",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-microtasksnativemodule@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-microtasksnativemodule@0.75.3"
+    },
+    {
+      "name": "React-nativeconfig",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-nativeconfig@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-nativeconfig@0.75.3"
+    },
+    {
+      "name": "React-perflogger",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-perflogger@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-perflogger@0.75.3"
+    },
+    {
+      "name": "React-performancetimeline",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-performancetimeline@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-performancetimeline@0.75.3"
+    },
+    {
+      "name": "React-rendererconsistency",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-rendererconsistency@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-rendererconsistency@0.75.3"
+    },
+    {
+      "name": "React-rendererdebug",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-rendererdebug@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-rendererdebug@0.75.3"
+    },
+    {
+      "name": "React-rncore",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-rncore@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-rncore@0.75.3"
+    },
+    {
+      "name": "React-runtimeexecutor",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-runtimeexecutor@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-runtimeexecutor@0.75.3"
+    },
+    {
+      "name": "React-runtimescheduler",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-runtimescheduler@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-runtimescheduler@0.75.3"
+    },
+    {
+      "name": "React-utils",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/React-utils@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/React-utils@0.75.3"
+    },
+    {
+      "name": "ReactCodegen",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/ReactCodegen@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/ReactCodegen@0.75.3"
+    },
+    {
+      "name": "ReactCommon",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/ReactCommon@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/ReactCommon@0.75.3"
+    },
+    {
+      "name": "ReactCommon/turbomodule",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/ReactCommon/turbomodule@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/ReactCommon/turbomodule@0.75.3"
+    },
+    {
+      "name": "ReactCommon/turbomodule/bridging",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/ReactCommon/turbomodule/bridging@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/ReactCommon/turbomodule/bridging@0.75.3"
+    },
+    {
+      "name": "ReactCommon/turbomodule/core",
+      "version": "0.75.3",
+      "purl": "pkg:cocoapods/ReactCommon/turbomodule/core@0.75.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/ReactCommon/turbomodule/core@0.75.3"
+    },
+    {
+      "name": "SSZipArchive",
+      "version": "2.5.5",
+      "purl": "pkg:cocoapods/SSZipArchive@2.5.5",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/SSZipArchive@2.5.5"
+    },
+    {
+      "name": "Sentry",
+      "version": "8.52.1",
+      "purl": "pkg:cocoapods/Sentry@8.52.1",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/Sentry@8.52.1"
+    },
+    {
+      "name": "Sentry/Core",
+      "version": "8.52.1",
+      "purl": "pkg:cocoapods/Sentry/Core@8.52.1",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/Sentry/Core@8.52.1"
+    },
+    {
+      "name": "Sentry/HybridSDK",
+      "version": "8.52.1",
+      "purl": "pkg:cocoapods/Sentry/HybridSDK@8.52.1",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/Sentry/HybridSDK@8.52.1"
+    },
+    {
+      "name": "SocketRocket",
+      "version": "0.7.0",
+      "purl": "pkg:cocoapods/SocketRocket@0.7.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/SocketRocket@0.7.0"
+    },
+    {
+      "name": "Yoga",
+      "version": "0.0.0",
+      "purl": "pkg:cocoapods/Yoga@0.0.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/Yoga@0.0.0"
+    },
+    {
+      "name": "boost",
+      "version": "1.84.0",
+      "purl": "pkg:cocoapods/boost@1.84.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/boost@1.84.0"
+    },
+    {
+      "name": "fmt",
+      "version": "9.1.0",
+      "purl": "pkg:cocoapods/fmt@9.1.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/fmt@9.1.0"
+    },
+    {
+      "name": "glog",
+      "version": "0.3.5",
+      "purl": "pkg:cocoapods/glog@0.3.5",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/glog@0.3.5"
+    },
+    {
+      "name": "nanopb",
+      "version": "2.30910.0",
+      "purl": "pkg:cocoapods/nanopb@2.30910.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/nanopb@2.30910.0"
+    },
+    {
+      "name": "nanopb/decode",
+      "version": "2.30910.0",
+      "purl": "pkg:cocoapods/nanopb/decode@2.30910.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/nanopb/decode@2.30910.0"
+    },
+    {
+      "name": "nanopb/encode",
+      "version": "2.30910.0",
+      "purl": "pkg:cocoapods/nanopb/encode@2.30910.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/nanopb/encode@2.30910.0"
+    },
+    {
+      "name": "react-native-encrypted-storage",
+      "version": "4.0.3",
+      "purl": "pkg:cocoapods/react-native-encrypted-storage@4.0.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/react-native-encrypted-storage@4.0.3"
+    },
+    {
+      "name": "react-native-safe-area-context",
+      "version": "4.11.0",
+      "purl": "pkg:cocoapods/react-native-safe-area-context@4.11.0",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/react-native-safe-area-context@4.11.0"
+    },
+    {
+      "name": "react-native-select-contact",
+      "version": "1.6.3",
+      "purl": "pkg:cocoapods/react-native-select-contact@1.6.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/react-native-select-contact@1.6.3"
+    },
+    {
+      "name": "react-native-wallet-manager",
+      "version": "0.0.7",
+      "purl": "pkg:cocoapods/react-native-wallet-manager@0.0.7",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/react-native-wallet-manager@0.0.7"
+    },
+    {
+      "name": "react-native-webview",
+      "version": "13.12.4",
+      "purl": "pkg:cocoapods/react-native-webview@13.12.4",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/react-native-webview@13.12.4"
+    },
+    {
+      "name": "zlib",
+      "version": "7.13.3",
+      "purl": "pkg:cocoapods/zlib@7.13.3",
+      "type": "library",
+      "bom-ref": "pkg:cocoapods/zlib@7.13.3"
+    }
+  ]
+}
