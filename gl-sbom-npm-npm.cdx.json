@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:6b6ab428-0d70-4593-8eee-96b947eb042e",
+  "serialNumber": "urn:uuid:8b9098e4-a200-4a33-b790-36549312c597",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-10-16T00:33:02Z",
+    "timestamp": "2025-10-16T22:47:24Z",
     "tools": [
       {
         "vendor": "GitLab",
@@ -1387,143 +1387,136 @@
     },
     {
       "name": "@sentry-internal/browser-utils",
-      "version": "8.54.0",
-      "purl": "pkg:npm/%40sentry-internal/browser-utils@8.54.0",
+      "version": "10.18.0",
+      "purl": "pkg:npm/%40sentry-internal/browser-utils@10.18.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry-internal/browser-utils@8.54.0"
+      "bom-ref": "pkg:npm/%40sentry-internal/browser-utils@10.18.0"
     },
     {
       "name": "@sentry-internal/feedback",
-      "version": "8.54.0",
-      "purl": "pkg:npm/%40sentry-internal/feedback@8.54.0",
+      "version": "10.18.0",
+      "purl": "pkg:npm/%40sentry-internal/feedback@10.18.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry-internal/feedback@8.54.0"
+      "bom-ref": "pkg:npm/%40sentry-internal/feedback@10.18.0"
     },
     {
       "name": "@sentry-internal/replay",
-      "version": "8.54.0",
-      "purl": "pkg:npm/%40sentry-internal/replay@8.54.0",
+      "version": "10.18.0",
+      "purl": "pkg:npm/%40sentry-internal/replay@10.18.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry-internal/replay@8.54.0"
+      "bom-ref": "pkg:npm/%40sentry-internal/replay@10.18.0"
     },
     {
       "name": "@sentry-internal/replay-canvas",
-      "version": "8.54.0",
-      "purl": "pkg:npm/%40sentry-internal/replay-canvas@8.54.0",
+      "version": "10.18.0",
+      "purl": "pkg:npm/%40sentry-internal/replay-canvas@10.18.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry-internal/replay-canvas@8.54.0"
+      "bom-ref": "pkg:npm/%40sentry-internal/replay-canvas@10.18.0"
     },
     {
       "name": "@sentry/babel-plugin-component-annotate",
-      "version": "3.5.0",
-      "purl": "pkg:npm/%40sentry/babel-plugin-component-annotate@3.5.0",
+      "version": "4.3.0",
+      "purl": "pkg:npm/%40sentry/babel-plugin-component-annotate@4.3.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/babel-plugin-component-annotate@3.5.0"
+      "bom-ref": "pkg:npm/%40sentry/babel-plugin-component-annotate@4.3.0"
     },
     {
       "name": "@sentry/browser",
-      "version": "8.54.0",
-      "purl": "pkg:npm/%40sentry/browser@8.54.0",
+      "version": "10.18.0",
+      "purl": "pkg:npm/%40sentry/browser@10.18.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/browser@8.54.0"
+      "bom-ref": "pkg:npm/%40sentry/browser@10.18.0"
     },
     {
       "name": "@sentry/cli",
-      "version": "2.46.0",
-      "purl": "pkg:npm/%40sentry/cli@2.46.0",
+      "version": "2.56.0",
+      "purl": "pkg:npm/%40sentry/cli@2.56.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/cli@2.46.0"
+      "bom-ref": "pkg:npm/%40sentry/cli@2.56.0"
     },
     {
       "name": "@sentry/cli-darwin",
-      "version": "2.46.0",
-      "purl": "pkg:npm/%40sentry/cli-darwin@2.46.0",
+      "version": "2.56.0",
+      "purl": "pkg:npm/%40sentry/cli-darwin@2.56.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/cli-darwin@2.46.0"
+      "bom-ref": "pkg:npm/%40sentry/cli-darwin@2.56.0"
     },
     {
       "name": "@sentry/cli-linux-arm",
-      "version": "2.46.0",
-      "purl": "pkg:npm/%40sentry/cli-linux-arm@2.46.0",
+      "version": "2.56.0",
+      "purl": "pkg:npm/%40sentry/cli-linux-arm@2.56.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/cli-linux-arm@2.46.0"
+      "bom-ref": "pkg:npm/%40sentry/cli-linux-arm@2.56.0"
     },
     {
       "name": "@sentry/cli-linux-arm64",
-      "version": "2.46.0",
-      "purl": "pkg:npm/%40sentry/cli-linux-arm64@2.46.0",
+      "version": "2.56.0",
+      "purl": "pkg:npm/%40sentry/cli-linux-arm64@2.56.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/cli-linux-arm64@2.46.0"
+      "bom-ref": "pkg:npm/%40sentry/cli-linux-arm64@2.56.0"
     },
     {
       "name": "@sentry/cli-linux-i686",
-      "version": "2.46.0",
-      "purl": "pkg:npm/%40sentry/cli-linux-i686@2.46.0",
+      "version": "2.56.0",
+      "purl": "pkg:npm/%40sentry/cli-linux-i686@2.56.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/cli-linux-i686@2.46.0"
+      "bom-ref": "pkg:npm/%40sentry/cli-linux-i686@2.56.0"
     },
     {
       "name": "@sentry/cli-linux-x64",
-      "version": "2.46.0",
-      "purl": "pkg:npm/%40sentry/cli-linux-x64@2.46.0",
+      "version": "2.56.0",
+      "purl": "pkg:npm/%40sentry/cli-linux-x64@2.56.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/cli-linux-x64@2.46.0"
+      "bom-ref": "pkg:npm/%40sentry/cli-linux-x64@2.56.0"
     },
     {
       "name": "@sentry/cli-win32-arm64",
-      "version": "2.46.0",
-      "purl": "pkg:npm/%40sentry/cli-win32-arm64@2.46.0",
+      "version": "2.56.0",
+      "purl": "pkg:npm/%40sentry/cli-win32-arm64@2.56.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/cli-win32-arm64@2.46.0"
+      "bom-ref": "pkg:npm/%40sentry/cli-win32-arm64@2.56.0"
     },
     {
       "name": "@sentry/cli-win32-i686",
-      "version": "2.46.0",
-      "purl": "pkg:npm/%40sentry/cli-win32-i686@2.46.0",
+      "version": "2.56.0",
+      "purl": "pkg:npm/%40sentry/cli-win32-i686@2.56.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/cli-win32-i686@2.46.0"
+      "bom-ref": "pkg:npm/%40sentry/cli-win32-i686@2.56.0"
     },
     {
       "name": "@sentry/cli-win32-x64",
-      "version": "2.46.0",
-      "purl": "pkg:npm/%40sentry/cli-win32-x64@2.46.0",
+      "version": "2.56.0",
+      "purl": "pkg:npm/%40sentry/cli-win32-x64@2.56.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/cli-win32-x64@2.46.0"
+      "bom-ref": "pkg:npm/%40sentry/cli-win32-x64@2.56.0"
     },
     {
       "name": "@sentry/core",
-      "version": "8.54.0",
-      "purl": "pkg:npm/%40sentry/core@8.54.0",
+      "version": "10.18.0",
+      "purl": "pkg:npm/%40sentry/core@10.18.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/core@8.54.0"
+      "bom-ref": "pkg:npm/%40sentry/core@10.18.0"
     },
     {
       "name": "@sentry/react",
-      "version": "8.54.0",
-      "purl": "pkg:npm/%40sentry/react@8.54.0",
+      "version": "10.18.0",
+      "purl": "pkg:npm/%40sentry/react@10.18.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/react@8.54.0"
+      "bom-ref": "pkg:npm/%40sentry/react@10.18.0"
     },
     {
       "name": "@sentry/react-native",
-      "version": "6.15.1",
-      "purl": "pkg:npm/%40sentry/react-native@6.15.1",
+      "version": "7.3.0",
+      "purl": "pkg:npm/%40sentry/react-native@7.3.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/react-native@6.15.1"
+      "bom-ref": "pkg:npm/%40sentry/react-native@7.3.0"
     },
     {
       "name": "@sentry/types",
-      "version": "8.54.0",
-      "purl": "pkg:npm/%40sentry/types@8.54.0",
+      "version": "10.18.0",
+      "purl": "pkg:npm/%40sentry/types@10.18.0",
       "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/types@8.54.0"
-    },
-    {
-      "name": "@sentry/utils",
-      "version": "8.54.0",
-      "purl": "pkg:npm/%40sentry/utils@8.54.0",
-      "type": "library",
-      "bom-ref": "pkg:npm/%40sentry/utils@8.54.0"
+      "bom-ref": "pkg:npm/%40sentry/types@10.18.0"
     },
     {
       "name": "@sideway/address",

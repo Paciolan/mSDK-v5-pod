@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:3923b42c-26c2-4858-ac89-53ef44cf7176",
+  "serialNumber": "urn:uuid:7dca1c2c-c3e3-4b25-a27e-f6d91ea69552",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-10-16T00:33:02Z",
+    "timestamp": "2025-10-16T22:47:24Z",
     "tools": [
       {
         "vendor": "GitLab",
@@ -288,10 +288,10 @@
     },
     {
       "name": "RNSentry",
-      "version": "6.15.1",
-      "purl": "pkg:cocoapods/RNSentry@6.15.1",
+      "version": "7.3.0",
+      "purl": "pkg:cocoapods/RNSentry@7.3.0",
       "type": "library",
-      "bom-ref": "pkg:cocoapods/RNSentry@6.15.1"
+      "bom-ref": "pkg:cocoapods/RNSentry@7.3.0"
     },
     {
       "name": "React",
@@ -988,24 +988,24 @@
     },
     {
       "name": "Sentry",
-      "version": "8.52.1",
-      "purl": "pkg:cocoapods/Sentry@8.52.1",
+      "version": "8.56.2",
+      "purl": "pkg:cocoapods/Sentry@8.56.2",
       "type": "library",
-      "bom-ref": "pkg:cocoapods/Sentry@8.52.1"
+      "bom-ref": "pkg:cocoapods/Sentry@8.56.2"
     },
     {
       "name": "Sentry/Core",
-      "version": "8.52.1",
-      "purl": "pkg:cocoapods/Sentry/Core@8.52.1",
+      "version": "8.56.2",
+      "purl": "pkg:cocoapods/Sentry/Core@8.56.2",
       "type": "library",
-      "bom-ref": "pkg:cocoapods/Sentry/Core@8.52.1"
+      "bom-ref": "pkg:cocoapods/Sentry/Core@8.56.2"
     },
     {
       "name": "Sentry/HybridSDK",
-      "version": "8.52.1",
-      "purl": "pkg:cocoapods/Sentry/HybridSDK@8.52.1",
+      "version": "8.56.2",
+      "purl": "pkg:cocoapods/Sentry/HybridSDK@8.56.2",
       "type": "library",
-      "bom-ref": "pkg:cocoapods/Sentry/HybridSDK@8.52.1"
+      "bom-ref": "pkg:cocoapods/Sentry/HybridSDK@8.56.2"
     },
     {
       "name": "SocketRocket",

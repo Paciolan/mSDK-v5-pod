@@ -92,7 +92,7 @@ PODS:
     - nanopb/encode (= 2.30910.0)
   - nanopb/decode (2.30910.0)
   - nanopb/encode (2.30910.0)
-  - PaciolanSDK (5.105.251016):
+  - PaciolanSDK (5.105.251017):
     - boost (= 1.84.0)
     - CodePush (= 9.0.1)
     - DoubleConversion (= 1.1.6)
@@ -145,8 +145,8 @@ PODS:
     - RNFBApp (= 19.3.0)
     - RNFBMessaging (= 19.3.0)
     - RNGestureHandler (= 2.21.2)
-    - RNSentry (= 6.15.1)
-    - Sentry (= 8.52.1)
+    - RNSentry (= 7.3.0)
+    - Sentry (= 8.56.2)
     - Yoga (= 0.0.0)
   - PromisesObjC (2.4.0)
   - RCT-Folly (2024.01.01.00):
@@ -1659,7 +1659,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNSentry (6.15.1):
+  - RNSentry (7.3.0):
     - DoubleConversion
     - glog
     - RCT-Folly (= 2024.01.01.00)
@@ -1679,12 +1679,12 @@ PODS:
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - Sentry/HybridSDK (= 8.52.1)
+    - Sentry/HybridSDK (= 8.56.2)
     - Yoga
-  - Sentry (8.52.1):
-    - Sentry/Core (= 8.52.1)
-  - Sentry/Core (8.52.1)
-  - Sentry/HybridSDK (8.52.1)
+  - Sentry (8.56.2):
+    - Sentry/Core (= 8.56.2)
+  - Sentry/Core (8.56.2)
+  - Sentry/HybridSDK (8.56.2)
   - SocketRocket (0.7.0)
   - SSZipArchive (2.5.5)
   - Yoga (0.0.0)
@@ -1956,7 +1956,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: ea963c370a38a8069cc5f7ba4ca849a60b6d7d15
   JWT: ef71dfb03e1f842081e64dc42eef0e164f35d251
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
-  PaciolanSDK: 5ebba58c4add9a46e5b63b4157912d207f25e6dd
+  PaciolanSDK: d0a497b105ae804c82c7c34979ac7761dbd926fc
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RCT-Folly: 34124ae2e667a0e5f0ea378db071d27548124321
   RCTDeprecation: 4191f6e64b72d9743f6fe1a8a16e89e868f5e9e7
@@ -2022,8 +2022,8 @@ SPEC CHECKSUMS:
   RNFBApp: 4097f75673f8b42a7cd1ba17e6ea85a94b45e4d1
   RNFBMessaging: 92325b0d5619ac90ef023a23cfd16fd3b91d0a88
   RNGestureHandler: b38bdc782b11aee88e3df8695d1d5fb76d4caba1
-  RNSentry: 8c8462caae6f3a148abf7f54aef7d137180d0fc2
-  Sentry: 2cbbe3592f30050c60e916c63c7f5a2fa584005e
+  RNSentry: 0bd4ad4b1097329ad04fe0e339a860394808aa02
+  Sentry: b53951377b78e21a734f5dc8318e333dbfc682d7
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   SSZipArchive: c69881e8ac5521f0e622291387add5f60f30f3c4
   Yoga: 4ef80d96a5534f0e01b3055f17d1e19a9fc61b63
