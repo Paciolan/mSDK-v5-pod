@@ -28,7 +28,7 @@
 
 @implementation PaciolanSDKViewController
 @synthesize config;
-static NSString *INSTALLED_VERSION = @"5.105.251017";
+static NSString *INSTALLED_VERSION = @"5.3.0";
 static TokenCallback tokenCallback;
 
 RCT_EXPORT_MODULE()
@@ -59,7 +59,7 @@ RCT_EXPORT_MODULE()
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge {
-    [CodePush overrideAppVersion: @"5.105"];
+    [CodePush overrideAppVersion: @"5.3"];
 
     // set codepush custom server url
     NSString *serverUrl = @"https://pkg.paciolan.io/codepush/msdk/";
