@@ -1,19 +1,38 @@
-ENV['RCT_NEW_ARCH_ENABLED'] = '0'
+ENV['RCT_NEW_ARCH_ENABLED'] = '1'
 
+require 'json'
 
-# Resolve react_native_pods.rb with node to allow for hoisting
-require Pod::Executable.execute_command('node', ['-p',
-'require.resolve(
-  "react-native/scripts/react_native_pods.rb",
-  {paths: [require("path").join(process.argv[1], "..")]}
-)', __dir__]).strip
+podfile_dir = __dir__
+sdk_root = File.expand_path('..', podfile_dir)
+node_modules_candidate = File.join(sdk_root, 'node_modules')
+node_modules_path = if Dir.exist?(node_modules_candidate)
+  File.realpath(node_modules_candidate)
+else
+  File.realpath(File.join(sdk_root, '..', 'node_modules'))
+end
+
+react_native_path = File.join(node_modules_path, 'react-native')
+react_native_relative_path =
+  Pathname.new(react_native_path).relative_path_from(Pathname.new(podfile_dir)).to_s
+react_native_pods_path = File.join(react_native_path, 'scripts', 'react_native_pods.rb')
+require react_native_pods_path
 
 platform :ios, 15.5
 prepare_react_native_project!
 
+# Prefer a local Hermes tarball when present to avoid network fetches.
+rn_version = JSON.parse(File.read(File.join(sdk_root, 'package.json'))).dig('dependencies', 'react-native')
+rn_version = rn_version.gsub(/[^0-9.]/, '') if rn_version
+hermes_tarball_candidates = [
+  File.join(sdk_root, 'hermes-engine', "hermes-ios-#{rn_version}-debug.tar.gz"),
+  File.join(sdk_root, 'hermes-engine', "hermes-ios-#{rn_version}.tar.gz"),
+  File.join(sdk_root, 'hermes-engine', "hermes-ios-#{rn_version}-release.tar.gz")
+]
+hermes_tarball = hermes_tarball_candidates.find { |path| File.exist?(path) }
+ENV['HERMES_ENGINE_TARBALL_PATH'] = hermes_tarball if hermes_tarball
+
 
 # # MSDK DEPENDENCIES: Follow the pattern to add a new dependency, every time we have a new one.
-node_modules_path = '../../node_modules'
 
 rnmaskedview_path = File.join(node_modules_path, '@react-native-masked-view/masked-view/RNCMaskedView.podspec')
 rngesturehandler_path = File.join(node_modules_path, 'react-native-gesture-handler/RNGestureHandler.podspec')
@@ -40,18 +59,18 @@ target 'PaciolanSDK_Example' do
   pod "PaciolanSDK", :path => "../"
 
   
-  pod 'RNCMaskedView', podspec: rnmaskedview_path
-  pod 'RNGestureHandler', podspec: rngesturehandler_path
-  pod 'react-native-encrypted-storage', podspec: react_native_encrypted_storage_path
-  pod 'react-native-safe-area-context', podspec: react_native_safe_area_context_path
-  pod 'react-native-webview', podspec: react_native_webview_path
-  pod 'CodePush', podspec: react_native_code_push_path
-  pod 'RNSentry', podspec: sentry_react_native_path
-  pod 'RNCPushNotificationIOS', podspec: react_native_push_notification_ios_path
-  pod 'react-native-select-contact', podspec: react_native_select_contact_path
-  pod 'RNFBApp', podspec: react_native_firebase_app
-  pod 'RNFBMessaging', podspec: react_native_firebase_messaging
-  pod 'react-native-wallet-manager', podspec: react_native_wallet_manager    
+  pod 'RNCMaskedView', :path => File.join(node_modules_path, '@react-native-masked-view/masked-view')
+  pod 'RNGestureHandler', :path => File.join(node_modules_path, 'react-native-gesture-handler')
+  pod 'react-native-encrypted-storage', :path => File.join(node_modules_path, 'react-native-encrypted-storage')
+  pod 'react-native-safe-area-context', :path => File.join(node_modules_path, 'react-native-safe-area-context')
+  pod 'react-native-webview', :path => File.join(node_modules_path, 'react-native-webview')
+  pod 'CodePush', :path => File.join(node_modules_path, 'react-native-code-push')
+  pod 'RNSentry', :path => File.join(node_modules_path, '@sentry/react-native')
+  pod 'RNCPushNotificationIOS', :path => File.join(node_modules_path, '@react-native-community/push-notification-ios')
+  pod 'react-native-select-contact', :path => File.join(node_modules_path, 'react-native-select-contact')
+  pod 'RNFBApp', :path => File.join(node_modules_path, '@react-native-firebase/app')
+  pod 'RNFBMessaging', :path => File.join(node_modules_path, '@react-native-firebase/messaging')
+  pod 'react-native-wallet-manager', :path => File.join(node_modules_path, 'react-native-wallet-manager')
   pod 'GoogleUtilities', :modular_headers => true
   pod 'FirebaseCore', :modular_headers => true
   pod 'nanopb', :modular_headers => true
@@ -64,17 +83,17 @@ target 'PaciolanSDK_Example' do
 
 
   use_react_native!(
-    :path => "../../node_modules/react-native",
-    :hermes_enabled => false,
+    :path => react_native_relative_path,
+    :hermes_enabled => true,
     :app_path => "#{Pod::Config.instance.installation_root}/..",
-    :fabric_enabled => false,
+    :fabric_enabled => true,
   )
 
   post_install do |installer|
     # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
     react_native_post_install(
       installer,
-      "../../node_modules/react-native",
+      react_native_relative_path,
       :mac_catalyst_enabled => false
     )
   end

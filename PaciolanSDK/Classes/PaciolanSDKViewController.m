@@ -11,11 +11,16 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBridgeDelegate.h>
 #import <React/RCTBridgeModule.h>
+#import <React-RCTAppDelegate/RCTAppSetupUtils.h>
 #import <React/RCTUtils.h>
 #import <React/RCTLog.h>
 #import <React/RCTEventDispatcher.h>
 #import <React/RCTEventEmitter.h>
 #import <CodePush/CodePush.h>
+
+#ifndef RCT_NEW_ARCH_ENABLED
+#define RCT_NEW_ARCH_ENABLED 0
+#endif
 
 
 @import Sentry;
@@ -28,7 +33,7 @@
 
 @implementation PaciolanSDKViewController
 @synthesize config;
-static NSString *INSTALLED_VERSION = @"5.105.251024";
+static NSString *INSTALLED_VERSION = @"5.105.260116";
 static TokenCallback tokenCallback;
 
 RCT_EXPORT_MODULE()
@@ -40,15 +45,16 @@ RCT_EXPORT_MODULE()
 
 - (void)viewDidLoad {
    [super viewDidLoad];
+#if RCT_NEW_ARCH_ENABLED
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        RCTAppSetupPrepareApp(UIApplication.sharedApplication, YES);
+    });
+#endif
     RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:@{}];
-  NSLog(@"installed versioon: %@", INSTALLED_VERSION);
-    RCTRootView *rootView = [
-        [RCTRootView alloc] 
-        initWithBridge:bridge 
-        moduleName:@"PaciolanSDK" 
-        initialProperties:@{@"configString":config, @"installedVersion": INSTALLED_VERSION}
-    ];
-
+    NSLog(@"installed versioon: %@", INSTALLED_VERSION);
+    NSDictionary *initialProps = @{@"configString": config, @"installedVersion": INSTALLED_VERSION};
+    UIView *rootView = RCTAppSetupDefaultRootView(bridge, @"PaciolanSDK", initialProps, RCT_NEW_ARCH_ENABLED);
     self.view = rootView;
 
     // Sentry config initialization.
