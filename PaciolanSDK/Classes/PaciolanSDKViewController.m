@@ -33,7 +33,7 @@
 
 @implementation PaciolanSDKViewController
 @synthesize config;
-static NSString *INSTALLED_VERSION = @"5.105.260121";
+static NSString *INSTALLED_VERSION = @"5.105.260122";
 static TokenCallback tokenCallback;
 
 RCT_EXPORT_MODULE()
