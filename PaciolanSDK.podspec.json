@@ -1,6 +1,6 @@
 {
   "name": "PaciolanSDK",
-  "version": "5.105.2601293850708",
+  "version": "5.105.2601293850852",
   "summary": "Pod Component for Paciolan Mobile SDK",
   "description": "This pod allows us to install the Paciolan react native SDK ViewController into an iOS app.",
   "homepage": "https://github.com/Paciolan/mSDK-v5-pod",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/Paciolan/mSDK-v5-pod.git",
-    "tag": "5.105.2601293850708"
+    "tag": "5.105.2601293850852"
   },
   "source_files": "PaciolanSDK/Classes/**/*.{h,m,swift}",
   "resources": "PaciolanSDK/Assets/{PaciolanSDK.js,assets}",
@@ -241,7 +241,7 @@
       "7.8.0"
     ],
     "RNCPushNotificationIOS": [
-      "1.12.0"
+      "1.11.0"
     ],
     "react-native-select-contact": [
       "1.6.3"
