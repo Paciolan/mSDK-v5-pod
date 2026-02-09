@@ -14,10 +14,28 @@
 #import "FBReactNativeSpec.h"
 
 
+@implementation NativeAccessibilityInfoSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeAccessibilityInfoSpecJSI_isReduceMotionEnabled(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
       return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "isReduceMotionEnabled", @selector(isReduceMotionEnabled:), args, count);
+    }
+
+    static facebook::jsi::Value __hostFunction_NativeAccessibilityInfoSpecJSI_isInvertColorsEnabled(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "isInvertColorsEnabled", @selector(isInvertColorsEnabled:), args, count);
+    }
+
+    static facebook::jsi::Value __hostFunction_NativeAccessibilityInfoSpecJSI_isHighTextContrastEnabled(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "isHighTextContrastEnabled", @selector(isHighTextContrastEnabled:), args, count);
     }
 
     static facebook::jsi::Value __hostFunction_NativeAccessibilityInfoSpecJSI_isTouchExplorationEnabled(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -40,10 +58,20 @@ namespace facebook::react {
       return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "getRecommendedTimeoutMillis", @selector(getRecommendedTimeoutMillis:onSuccess:), args, count);
     }
 
+    static facebook::jsi::Value __hostFunction_NativeAccessibilityInfoSpecJSI_isGrayscaleEnabled(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "isGrayscaleEnabled", @selector(isGrayscaleEnabled:), args, count);
+    }
+
   NativeAccessibilityInfoSpecJSI::NativeAccessibilityInfoSpecJSI(const ObjCTurboModule::InitParams &params)
     : ObjCTurboModule(params) {
       
         methodMap_["isReduceMotionEnabled"] = MethodMetadata {1, __hostFunction_NativeAccessibilityInfoSpecJSI_isReduceMotionEnabled};
+        
+        
+        methodMap_["isInvertColorsEnabled"] = MethodMetadata {1, __hostFunction_NativeAccessibilityInfoSpecJSI_isInvertColorsEnabled};
+        
+        
+        methodMap_["isHighTextContrastEnabled"] = MethodMetadata {1, __hostFunction_NativeAccessibilityInfoSpecJSI_isHighTextContrastEnabled};
         
         
         methodMap_["isTouchExplorationEnabled"] = MethodMetadata {1, __hostFunction_NativeAccessibilityInfoSpecJSI_isTouchExplorationEnabled};
@@ -60,8 +88,21 @@ namespace facebook::react {
         
         methodMap_["getRecommendedTimeoutMillis"] = MethodMetadata {2, __hostFunction_NativeAccessibilityInfoSpecJSI_getRecommendedTimeoutMillis};
         
+        
+        methodMap_["isGrayscaleEnabled"] = MethodMetadata {1, __hostFunction_NativeAccessibilityInfoSpecJSI_isGrayscaleEnabled};
+        
   }
 } // namespace facebook::react
+
+@implementation NativeAccessibilityManagerSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 @implementation RCTCxxConvert (NativeAccessibilityManager_SpecSetAccessibilityContentSizeMultipliersJSMultipliers)
 + (RCTManagedPointer *)JS_NativeAccessibilityManager_SpecSetAccessibilityContentSizeMultipliersJSMultipliers:(id)json
 {
@@ -90,6 +131,10 @@ namespace facebook::react {
 
     static facebook::jsi::Value __hostFunction_NativeAccessibilityManagerSpecJSI_getCurrentReduceMotionState(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
       return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "getCurrentReduceMotionState", @selector(getCurrentReduceMotionState:onError:), args, count);
+    }
+
+    static facebook::jsi::Value __hostFunction_NativeAccessibilityManagerSpecJSI_getCurrentDarkerSystemColorsState(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "getCurrentDarkerSystemColorsState", @selector(getCurrentDarkerSystemColorsState:onError:), args, count);
     }
 
     static facebook::jsi::Value __hostFunction_NativeAccessibilityManagerSpecJSI_getCurrentPrefersCrossFadeTransitionsState(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -135,6 +180,9 @@ namespace facebook::react {
         methodMap_["getCurrentReduceMotionState"] = MethodMetadata {2, __hostFunction_NativeAccessibilityManagerSpecJSI_getCurrentReduceMotionState};
         
         
+        methodMap_["getCurrentDarkerSystemColorsState"] = MethodMetadata {2, __hostFunction_NativeAccessibilityManagerSpecJSI_getCurrentDarkerSystemColorsState};
+        
+        
         methodMap_["getCurrentPrefersCrossFadeTransitionsState"] = MethodMetadata {2, __hostFunction_NativeAccessibilityManagerSpecJSI_getCurrentPrefersCrossFadeTransitionsState};
         
         
@@ -157,6 +205,16 @@ namespace facebook::react {
         setMethodArgConversionSelector(@"announceForAccessibilityWithOptions", 1, @"JS_NativeAccessibilityManager_SpecAnnounceForAccessibilityWithOptionsOptions:");
   }
 } // namespace facebook::react
+
+@implementation NativeActionSheetManagerSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 @implementation RCTCxxConvert (NativeActionSheetManager_SpecShowActionSheetWithOptionsOptions)
 + (RCTManagedPointer *)JS_NativeActionSheetManager_SpecShowActionSheetWithOptionsOptions:(id)json
 {
@@ -196,6 +254,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeAlertManagerSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 @implementation RCTCxxConvert (NativeAlertManager_Args)
 + (RCTManagedPointer *)JS_NativeAlertManager_Args:(id)json
 {
@@ -215,6 +283,16 @@ namespace facebook::react {
         setMethodArgConversionSelector(@"alertWithArgs", 0, @"JS_NativeAlertManager_Args:");
   }
 } // namespace facebook::react
+
+@implementation NativeAnimatedModuleSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 @implementation RCTCxxConvert (NativeAnimatedModule_EventMapping)
 + (RCTManagedPointer *)JS_NativeAnimatedModule_EventMapping:(id)json
 {
@@ -395,6 +473,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeAnimatedTurboModuleSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 @implementation RCTCxxConvert (NativeAnimatedTurboModule_EventMapping)
 + (RCTManagedPointer *)JS_NativeAnimatedTurboModule_EventMapping:(id)json
 {
@@ -576,6 +664,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeAppStateSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeAppStateSpecJSI_getCurrentAppState(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -611,6 +709,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeAppearanceSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeAppearanceSpecJSI_getColorScheme(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -645,6 +753,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeBlobModuleSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 
 namespace facebook::react {
   
@@ -702,6 +820,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeBugReportingSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeBugReportingSpecJSI_startReportAProblemFlow(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -722,6 +850,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeClipboardSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 
 namespace facebook::react {
   
@@ -744,6 +882,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeDevLoadingViewSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeDevLoadingViewSpecJSI_showMessage(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -764,6 +912,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeDevMenuSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 
 namespace facebook::react {
   
@@ -806,6 +964,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeDevSettingsSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 
 namespace facebook::react {
   
@@ -898,40 +1066,15 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
-namespace facebook::react {
-  
-    static facebook::jsi::Value __hostFunction_NativeDevToolsSettingsManagerSpecJSI_setConsolePatchSettings(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
-      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "setConsolePatchSettings", @selector(setConsolePatchSettings:), args, count);
-    }
+@implementation NativeDeviceEventManagerSpecBase
 
-    static facebook::jsi::Value __hostFunction_NativeDevToolsSettingsManagerSpecJSI_getConsolePatchSettings(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
-      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, StringKind, "getConsolePatchSettings", @selector(getConsolePatchSettings), args, count);
-    }
 
-    static facebook::jsi::Value __hostFunction_NativeDevToolsSettingsManagerSpecJSI_setProfilingSettings(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
-      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "setProfilingSettings", @selector(setProfilingSettings:), args, count);
-    }
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
 
-    static facebook::jsi::Value __hostFunction_NativeDevToolsSettingsManagerSpecJSI_getProfilingSettings(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
-      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, StringKind, "getProfilingSettings", @selector(getProfilingSettings), args, count);
-    }
-
-  NativeDevToolsSettingsManagerSpecJSI::NativeDevToolsSettingsManagerSpecJSI(const ObjCTurboModule::InitParams &params)
-    : ObjCTurboModule(params) {
-      
-        methodMap_["setConsolePatchSettings"] = MethodMetadata {1, __hostFunction_NativeDevToolsSettingsManagerSpecJSI_setConsolePatchSettings};
-        
-        
-        methodMap_["getConsolePatchSettings"] = MethodMetadata {0, __hostFunction_NativeDevToolsSettingsManagerSpecJSI_getConsolePatchSettings};
-        
-        
-        methodMap_["setProfilingSettings"] = MethodMetadata {1, __hostFunction_NativeDevToolsSettingsManagerSpecJSI_setProfilingSettings};
-        
-        
-        methodMap_["getProfilingSettings"] = MethodMetadata {0, __hostFunction_NativeDevToolsSettingsManagerSpecJSI_getProfilingSettings};
-        
-  }
-} // namespace facebook::react
 
 namespace facebook::react {
   
@@ -947,6 +1090,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeDeviceInfoSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeDeviceInfoSpecJSI_getConstants(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -960,6 +1113,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeExceptionsManagerSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 @implementation RCTCxxConvert (NativeExceptionsManager_StackFrame)
 + (RCTManagedPointer *)JS_NativeExceptionsManager_StackFrame:(id)json
 {
@@ -986,10 +1149,6 @@ namespace facebook::react {
       return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "reportException", @selector(reportException:), args, count);
     }
 
-    static facebook::jsi::Value __hostFunction_NativeExceptionsManagerSpecJSI_updateExceptionMessage(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
-      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "updateExceptionMessage", @selector(updateExceptionMessage:stack:exceptionId:), args, count);
-    }
-
     static facebook::jsi::Value __hostFunction_NativeExceptionsManagerSpecJSI_dismissRedbox(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
       return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "dismissRedbox", @selector(dismissRedbox), args, count);
     }
@@ -1006,13 +1165,20 @@ namespace facebook::react {
         methodMap_["reportException"] = MethodMetadata {1, __hostFunction_NativeExceptionsManagerSpecJSI_reportException};
         setMethodArgConversionSelector(@"reportException", 0, @"JS_NativeExceptionsManager_ExceptionData:");
         
-        methodMap_["updateExceptionMessage"] = MethodMetadata {3, __hostFunction_NativeExceptionsManagerSpecJSI_updateExceptionMessage};
-        
-        
         methodMap_["dismissRedbox"] = MethodMetadata {0, __hostFunction_NativeExceptionsManagerSpecJSI_dismissRedbox};
         
   }
 } // namespace facebook::react
+
+@implementation NativeFileReaderModuleSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 
 namespace facebook::react {
   
@@ -1034,6 +1200,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeFrameRateLoggerSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 @implementation RCTCxxConvert (NativeFrameRateLogger_SpecSetGlobalOptionsOptions)
 + (RCTManagedPointer *)JS_NativeFrameRateLogger_SpecSetGlobalOptionsOptions:(id)json
 {
@@ -1075,6 +1251,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeHeadlessJsTaskSupportSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeHeadlessJsTaskSupportSpecJSI_notifyTaskFinished(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -1095,6 +1281,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeI18nManagerSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 
 namespace facebook::react {
   
@@ -1130,6 +1326,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeImageEditorSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 @implementation RCTCxxConvert (NativeImageEditor_OptionsOffset)
 + (RCTManagedPointer *)JS_NativeImageEditor_OptionsOffset:(id)json
 {
@@ -1167,6 +1373,16 @@ namespace facebook::react {
         setMethodArgConversionSelector(@"cropImage", 1, @"JS_NativeImageEditor_Options:");
   }
 } // namespace facebook::react
+
+@implementation NativeImageLoaderIOSSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 
 namespace facebook::react {
   
@@ -1210,6 +1426,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeImageStoreIOSSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeImageStoreIOSSpecJSI_getBase64ForTag(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -1245,6 +1471,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeJSCHeapCaptureSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeJSCHeapCaptureSpecJSI_captureComplete(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -1259,19 +1495,15 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
-namespace facebook::react {
-  
-    static facebook::jsi::Value __hostFunction_NativeJSCSamplingProfilerSpecJSI_operationComplete(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
-      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "operationComplete", @selector(operationComplete:result:error:), args, count);
-    }
+@implementation NativeKeyboardObserverSpecBase
 
-  NativeJSCSamplingProfilerSpecJSI::NativeJSCSamplingProfilerSpecJSI(const ObjCTurboModule::InitParams &params)
-    : ObjCTurboModule(params) {
-      
-        methodMap_["operationComplete"] = MethodMetadata {3, __hostFunction_NativeJSCSamplingProfilerSpecJSI_operationComplete};
-        
-  }
-} // namespace facebook::react
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 
 namespace facebook::react {
   
@@ -1293,6 +1525,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeLinkingManagerSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 
 namespace facebook::react {
   
@@ -1343,6 +1585,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeLogBoxSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeLogBoxSpecJSI_show(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -1364,6 +1616,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeModalManagerSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeModalManagerSpecJSI_addListener(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -1384,6 +1646,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeNetworkingIOSSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 @implementation RCTCxxConvert (NativeNetworkingIOS_SpecSendRequestQuery)
 + (RCTManagedPointer *)JS_NativeNetworkingIOS_SpecSendRequestQuery:(id)json
 {
@@ -1432,6 +1704,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativePlatformConstantsIOSSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativePlatformConstantsIOSSpecJSI_getConstants(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -1445,6 +1727,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativePushNotificationManagerIOSSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 @implementation RCTCxxConvert (NativePushNotificationManagerIOS_SpecRequestPermissionsPermission)
 + (RCTManagedPointer *)JS_NativePushNotificationManagerIOS_SpecRequestPermissionsPermission:(id)json
 {
@@ -1590,6 +1882,83 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeReactDevToolsRuntimeSettingsModuleSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+@implementation RCTCxxConvert (NativeReactDevToolsRuntimeSettingsModule_PartialReloadAndProfileConfig)
++ (RCTManagedPointer *)JS_NativeReactDevToolsRuntimeSettingsModule_PartialReloadAndProfileConfig:(id)json
+{
+  return facebook::react::managedPointer<JS::NativeReactDevToolsRuntimeSettingsModule::PartialReloadAndProfileConfig>(json);
+}
+@end
+namespace facebook::react {
+  
+    static facebook::jsi::Value __hostFunction_NativeReactDevToolsRuntimeSettingsModuleSpecJSI_setReloadAndProfileConfig(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "setReloadAndProfileConfig", @selector(setReloadAndProfileConfig:), args, count);
+    }
+
+    static facebook::jsi::Value __hostFunction_NativeReactDevToolsRuntimeSettingsModuleSpecJSI_getReloadAndProfileConfig(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, ObjectKind, "getReloadAndProfileConfig", @selector(getReloadAndProfileConfig), args, count);
+    }
+
+  NativeReactDevToolsRuntimeSettingsModuleSpecJSI::NativeReactDevToolsRuntimeSettingsModuleSpecJSI(const ObjCTurboModule::InitParams &params)
+    : ObjCTurboModule(params) {
+      
+        methodMap_["setReloadAndProfileConfig"] = MethodMetadata {1, __hostFunction_NativeReactDevToolsRuntimeSettingsModuleSpecJSI_setReloadAndProfileConfig};
+        setMethodArgConversionSelector(@"setReloadAndProfileConfig", 0, @"JS_NativeReactDevToolsRuntimeSettingsModule_PartialReloadAndProfileConfig:");
+        
+        methodMap_["getReloadAndProfileConfig"] = MethodMetadata {0, __hostFunction_NativeReactDevToolsRuntimeSettingsModuleSpecJSI_getReloadAndProfileConfig};
+        
+  }
+} // namespace facebook::react
+
+@implementation NativeReactDevToolsSettingsManagerSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
+namespace facebook::react {
+  
+    static facebook::jsi::Value __hostFunction_NativeReactDevToolsSettingsManagerSpecJSI_setGlobalHookSettings(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "setGlobalHookSettings", @selector(setGlobalHookSettings:), args, count);
+    }
+
+    static facebook::jsi::Value __hostFunction_NativeReactDevToolsSettingsManagerSpecJSI_getGlobalHookSettings(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, StringKind, "getGlobalHookSettings", @selector(getGlobalHookSettings), args, count);
+    }
+
+  NativeReactDevToolsSettingsManagerSpecJSI::NativeReactDevToolsSettingsManagerSpecJSI(const ObjCTurboModule::InitParams &params)
+    : ObjCTurboModule(params) {
+      
+        methodMap_["setGlobalHookSettings"] = MethodMetadata {1, __hostFunction_NativeReactDevToolsSettingsManagerSpecJSI_setGlobalHookSettings};
+        
+        
+        methodMap_["getGlobalHookSettings"] = MethodMetadata {0, __hostFunction_NativeReactDevToolsSettingsManagerSpecJSI_getGlobalHookSettings};
+        
+  }
+} // namespace facebook::react
+
+@implementation NativeRedBoxSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeRedBoxSpecJSI_setExtraData(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -1611,6 +1980,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeSegmentFetcherSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeSegmentFetcherSpecJSI_fetchSegment(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -1631,6 +2010,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeSettingsManagerSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 
 namespace facebook::react {
   
@@ -1659,6 +2048,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeShareModuleSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 @implementation RCTCxxConvert (NativeShareModule_SpecShareContent)
 + (RCTManagedPointer *)JS_NativeShareModule_SpecShareContent:(id)json
 {
@@ -1679,6 +2078,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeSoundManagerSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeSoundManagerSpecJSI_playTouchSound(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -1693,6 +2102,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeSourceCodeSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeSourceCodeSpecJSI_getConstants(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -1706,6 +2125,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeStatusBarManagerIOSSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 
 namespace facebook::react {
   
@@ -1763,6 +2192,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeTimingSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeTimingSpecJSI_createTimer(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -1791,6 +2230,16 @@ namespace facebook::react {
   }
 } // namespace facebook::react
 
+@implementation NativeVibrationSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
+
 namespace facebook::react {
   
     static facebook::jsi::Value __hostFunction_NativeVibrationSpecJSI_vibrate(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -1818,6 +2267,16 @@ namespace facebook::react {
         
   }
 } // namespace facebook::react
+
+@implementation NativeWebSocketModuleSpecBase
+
+
+- (void)setEventEmitterCallback:(EventEmitterCallbackWrapper *)eventEmitterCallbackWrapper
+{
+  _eventEmitterCallback = std::move(eventEmitterCallbackWrapper->_eventEmitterCallback);
+}
+@end
+
 @implementation RCTCxxConvert (NativeWebSocketModule_SpecConnectOptions)
 + (RCTManagedPointer *)JS_NativeWebSocketModule_SpecConnectOptions:(id)json
 {
