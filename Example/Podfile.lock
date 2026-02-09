@@ -96,7 +96,7 @@ PODS:
     - nanopb/encode (= 2.30910.0)
   - nanopb/decode (2.30910.0)
   - nanopb/encode (2.30910.0)
-  - PaciolanSDK (5.105.2602093891918):
+  - PaciolanSDK (5.105.2602093892135):
     - boost (= 1.84.0)
     - CodePush (= 9.0.1)
     - DoubleConversion (= 1.1.6)
@@ -2153,7 +2153,7 @@ SPEC CHECKSUMS:
   hermes-engine: 6225c1fdbcd8b3a258e577c97f7fdd685ff8f01b
   JWT: ef71dfb03e1f842081e64dc42eef0e164f35d251
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
-  PaciolanSDK: 014434952457fc966ccd936bfefd8035dd3ad76f
+  PaciolanSDK: e51afc60c319b11ccf8ededadcdcb1fb2172bbdc
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RCT-Folly: e78785aa9ba2ed998ea4151e314036f6c49e6d82
   RCTDeprecation: b2eecf2d60216df56bc5e6be5f063826d3c1ee35
