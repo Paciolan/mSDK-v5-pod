@@ -96,7 +96,7 @@ PODS:
     - nanopb/encode (= 2.30910.0)
   - nanopb/decode (2.30910.0)
   - nanopb/encode (2.30910.0)
-  - PaciolanSDK (5.4.0):
+  - PaciolanSDK (5.105.2603254084880):
     - boost (= 1.84.0)
     - CodePush (= 9.0.1)
     - DoubleConversion (= 1.1.6)
@@ -171,8 +171,8 @@ PODS:
     - RNFBApp (= 19.3.0)
     - RNFBMessaging (= 19.3.0)
     - RNGestureHandler (= 2.29.1)
-    - RNSentry (= 7.8.0)
-    - Sentry/HybridSDK (= 8.57.3)
+    - RNSentry (= 7.13.0)
+    - Sentry/HybridSDK (= 8.58.0)
     - Yoga (= 0.0.0)
   - PromisesObjC (2.4.0)
   - RCT-Folly (2024.11.18.00):
@@ -1837,7 +1837,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNSentry (7.8.0):
+  - RNSentry (7.13.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1858,9 +1858,9 @@ PODS:
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - Sentry/HybridSDK (= 8.57.3)
+    - Sentry/HybridSDK (= 8.58.0)
     - Yoga
-  - Sentry/HybridSDK (8.57.3)
+  - Sentry/HybridSDK (8.58.0)
   - SocketRocket (0.7.1)
   - SSZipArchive (2.5.5)
   - Yoga (0.0.0)
@@ -2153,7 +2153,7 @@ SPEC CHECKSUMS:
   hermes-engine: 6225c1fdbcd8b3a258e577c97f7fdd685ff8f01b
   JWT: ef71dfb03e1f842081e64dc42eef0e164f35d251
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
-  PaciolanSDK: a523c3743470634011075dc0a549941180da9fad
+  PaciolanSDK: aafe32defdc8c667652eff956e5f05410bc8202e
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RCT-Folly: e78785aa9ba2ed998ea4151e314036f6c49e6d82
   RCTDeprecation: b2eecf2d60216df56bc5e6be5f063826d3c1ee35
@@ -2223,8 +2223,8 @@ SPEC CHECKSUMS:
   RNFBApp: 4097f75673f8b42a7cd1ba17e6ea85a94b45e4d1
   RNFBMessaging: 92325b0d5619ac90ef023a23cfd16fd3b91d0a88
   RNGestureHandler: 6268a11b236d8229890690d043f386dae9a3cacc
-  RNSentry: fc81838da886ac7841b665ca415c11211950b053
-  Sentry: c643eb180df401dd8c734c5036ddd9dd9218daa6
+  RNSentry: 556c7efc2146a82ba947b93dc90369d73a988e6d
+  Sentry: d587a8fe91ca13503ecd69a1905f3e8a0fcf61be
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   SSZipArchive: c69881e8ac5521f0e622291387add5f60f30f3c4
   Yoga: afd04ff05ebe0121a00c468a8a3c8080221cb14c

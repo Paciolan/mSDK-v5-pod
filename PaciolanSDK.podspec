@@ -139,6 +139,6 @@ Pod::Spec.new do |s|
       s.dependency spec.name, "#{spec.version}"
   end
 
-  s.dependency "Sentry/HybridSDK", "8.57.3"
+  s.dependency "Sentry/HybridSDK", "8.58.0"
 
 end
