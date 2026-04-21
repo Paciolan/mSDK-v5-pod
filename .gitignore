@@ -41,6 +41,3 @@ Example/.xcode.env.local
 Pods/
 Example2/Pods
 Example2/.xcode.env.local
-
-# Sentry CLI config (contains auth tokens)
-sentry.properties
