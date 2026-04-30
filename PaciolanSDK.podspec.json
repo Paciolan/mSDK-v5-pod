@@ -1,6 +1,6 @@
 {
   "name": "PaciolanSDK",
-  "version": "5.105.2604224222051",
+  "version": "5.6.0",
   "summary": "Pod Component for Paciolan Mobile SDK",
   "description": "This pod allows us to install the Paciolan react native SDK ViewController into an iOS app.",
   "homepage": "https://github.com/Paciolan/mSDK-v5-pod",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/Paciolan/mSDK-v5-pod.git",
-    "tag": "5.105.2604224222051"
+    "tag": "5.6.0"
   },
   "source_files": "PaciolanSDK/Classes/**/*.{h,m,swift}",
   "resources": "PaciolanSDK/Assets/{PaciolanSDK.js,assets}",
@@ -28,82 +28,82 @@
   },
   "dependencies": {
     "React": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-Core": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-CoreModules": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "RCTRequired": [
       "0.78.0"
     ],
     "React-RCTAppDelegate": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-RCTActionSheet": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-RCTAnimation": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-RCTBlob": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-RCTImage": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-RCTLinking": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-RCTNetwork": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-RCTSettings": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-RCTText": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-RCTVibration": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-RCTFBReactNativeSpec": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-rncore": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-FabricComponents": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-cxxreact": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-jsi": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-jsiexecutor": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-jserrorhandler": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-Mapbuffer": [
       "0.78.0"
     ],
     "RCTTypeSafety": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "ReactCommon": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "Yoga": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-graphics": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-featureflags": [
       "0.78.0"
@@ -112,16 +112,16 @@
       "0.78.0"
     ],
     "React-Fabric": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-FabricImage": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-ImageManager": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-RCTFabric": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "RCTDeprecation": [
       "0.78.0"
@@ -130,19 +130,19 @@
       "0.78.0"
     ],
     "React-jsinspector": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-jsinspectortracing": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-callinvoker": [
       "0.78.0"
     ],
     "React-perflogger": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-runtimeexecutor": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-logger": [
       "0.78.0"
@@ -151,55 +151,55 @@
       "0.78.0"
     ],
     "React-utils": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-runtimescheduler": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-performancetimeline": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-timing": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-NativeModulesApple": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-rendererdebug": [
       "0.78.0"
     ],
     "React-RuntimeCore": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-RuntimeApple": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-RuntimeHermes": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-jsitracing": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-featureflagsnativemodule": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-microtasksnativemodule": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-idlecallbacksnativemodule": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-domnativemodule": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-defaultsnativemodule": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "React-hermes": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "hermes-engine": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "DoubleConversion": [
       "1.1.6"
@@ -220,40 +220,40 @@
       "11.0.2"
     ],
     "react-native-encrypted-storage": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "RNCMaskedView": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "RNGestureHandler": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "react-native-safe-area-context": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "react-native-webview": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "CodePush": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "RNSentry": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "RNCPushNotificationIOS": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "react-native-select-contact": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "RNFBApp": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "RNFBMessaging": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "react-native-wallet-manager": [
-      "5.105.2604224222051"
+      "5.6.0"
     ],
     "Sentry/HybridSDK": [
       "8.58.0"
